@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	:root {
+		--contrast: hsl(0deg 0% 0%);
+		--background: hsl(0deg 0% 100%);
+		--foreground: hsl(0deg 0% 20%);
+		--card: hsl(0deg 0% 100%);
+		--overlay: hsl(0deg, 0%, 100%, 40%);
+		--card-foreground: hsl(20deg 14.3% 4.1%);
+		--popover: hsl(0deg 0% 100%);
+		--popover-foreground: hsl(20deg 14.3% 4.1%);
+		--primary: hsl(41.92deg 90% 50%);
+		--primary-foreground: hsl(26deg 83.3% 14.1%);
+		--secondary: hsl(60deg 4.8% 95.9%);
+		--secondary-foreground: hsl(24deg 9.8% 10%);
+		--muted: hsl(60deg 4.8% 95.9%);
+		--muted-foreground: hsl(25deg 5.3% 44.7%);
+		--accent: hsl(60deg 4.8% 95.9%);
+		--accent-foreground: hsl(24deg 9.8% 10%);
+		--destructive: hsl(0deg 84.2% 60.2%);
+		--destructive-foreground: hsl(60deg 9.1% 97.8%);
+		--border: hsl(20deg 5.9% 90%);
+		--input: hsl(20deg 5.9% 90%);
+		--ring: hsl(20deg 14.3% 4.1%);
+		--radius: 0.5rem;
+	}
+
+	.dark {
+		--contrast: hsl(0deg 0% 100%);
+		--background: hsl(20deg 14.3% 4.1%);
+		--foreground: hsl(0deg 0% 50%);
+		--foreground: hsl(271.76deg 11.11% 80%);
+		// --card: hsl(20deg 14.3% 4.1%);
+		--card: hsl(216deg 19.08% 25.69%);
+		--overlay: hsl(216deg, 19.08%, 25.69%, 70%);
+		--card-foreground: hsl(60deg 9.1% 97.8%);
+		--popover: hsl(20deg 14.3% 4.1%);
+		--popover-foreground: hsl(60deg 9.1% 97.8%);
+		--primary: hsl(47.9deg 95.8% 53.1%);
+		--primary-foreground: hsl(26deg 83.3% 14.1%);
+		--secondary: hsl(12deg 6.5% 15.1%);
+		--secondary-foreground: hsl(60deg 9.1% 97.8%);
+		--muted: hsl(12deg 6.5% 15.1%);
+		--muted-foreground: hsl(24deg 5.4% 63.9%);
+		--accent: hsl(12deg 6.5% 15.1%);
+		--accent-foreground: hsl(60deg 9.1% 97.8%);
+		--destructive: hsl(0deg 62.8% 30.6%);
+		--destructive-foreground: hsl(60deg 9.1% 97.8%);
+		--border: hsl(12deg 6.5% 15.1%);
+		--input: hsl(12deg 6.5% 15.1%);
+		--ring: hsl(35.5deg 91.7% 32.9%);
+	}
+}
+* {
+	@apply border-border;
+}
+body {
+	@apply bg-background text-foreground font-text text-base;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	min-height: 100dvh;
+	font-size: 1.3rem;
+	background: linear-gradient(to bottom, var(--secondary), black)
+		var(--secondary);
+	background-attachment: fixed;
+	position: relative;
+	isolation: isolate;
+	&:after {
+		content: "";
+		position: absolute;
+		inset: 0;
+		background-color: var(--background);
+		opacity: 0.4;
+		z-index: -2;
+	}
+}
+h1 {
+	position: relative;
+	margin: 0 auto;
+	padding-block: 2rem;
+	padding-left: 1rem;
+	text-transform: uppercase;
+	font-family: var(--title-font);
+	font-size: clamp(38px, 28px + 2vw, 50px);
+	letter-spacing: 0.15rem;
+	line-height: 1;
+	text-transform: uppercase;
+	// text-shadow: 0 0 80px rgba(255, 255, 255, 0.5);
+	display: inline-block;
+	// background: linear-gradient(to right, #a855f7, #ec4899, #eab308, #ec4899, #a855f7, #ec4899, #eab308);
+	background: linear-gradient(
+		to right,
+		var(--primary),
+		white,
+		var(--primary),
+		white,
+		var(--primary),
+		white,
+		var(--primary)
+	);
+	background-size: 300% 300%;
+	background-clip: text;
+	color: transparent;
+	animation: gradient 6s linear infinite;
+
+	&:before {
+		content: "";
+		position: absolute;
+		bottom: 40px;
+		left: 0;
+		width: 10px;
+		aspect-ratio: 1;
+		border-radius: 50%;
+		background-color: var(--primary);
+	}
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	100% {
+		background-position: 100% 50%;
+	}
+}
