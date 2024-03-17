@@ -32,8 +32,8 @@
 	.dark {
 		--contrast: hsl(0deg 0% 100%);
 		--background: hsl(20deg 14.3% 4.1%);
-		--foreground: hsl(0deg 0% 50%);
-		--foreground: hsl(271.76deg 11.11% 80%);
+		// --foreground: hsl(0deg 0% 50%);
+		--foreground: hsl(271.76deg 11.11% 70%);
 		// --card: hsl(20deg 14.3% 4.1%);
 		--card: hsl(216deg 19.08% 25.69%);
 		--overlay: hsl(216deg, 19.08%, 25.69%, 70%);
@@ -82,7 +82,7 @@ body {
 h1,
 .hero-title {
 	position: relative;
-	margin: 0 auto;
+	// margin: 0 auto;
 	padding-block: 2rem;
 	padding-left: 1rem;
 	// text-transform: uppercase;

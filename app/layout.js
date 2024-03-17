@@ -34,19 +34,19 @@ const foundation = localFont({
 });
 
 export const metadata = {
-	title: "Graph and Co, créateurs de sites web près de Colmar",
+	title: "Graph and Co, créateur de sites web près de Colmar",
 	description:
 		"Nous sommes une agence web basée près de Colmar spécialisée dans la réalisation de sites web modernes et intuitifs",
 };
 
 export default function RootLayout({ children }) {
 	return (
-		<html lang="fr" suppressHydrationWarning>
+		<html lang="fr" className="dark" suppressHydrationWarning>
 			<head />
 			<body
 				className={`${mostranuova.variable} ${mostranuova2.variable} ${foundation.variable}`}
 			>
-				<div className="site-bg fixed inset-0 -z-10">
+				<div className="site-bg fixed inset-0 -z-10 object-top">
 					<Image
 						className="object-cover brightness-[3.5] dark:brightness-[-10]"
 						src="/img/site-bg.svg"
