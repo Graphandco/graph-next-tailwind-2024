@@ -13,9 +13,10 @@ module.exports = {
 			base: [
 				"1.2rem",
 				{
-					lineHeight: "1.5rem",
+					lineHeight: "1.8rem",
 					letterSpacing: "-0.01em",
 					fontWeight: "500",
+					letterSpacing: "0.01erm",
 				},
 			],
 			"3xl": [
@@ -25,6 +26,10 @@ module.exports = {
 					letterSpacing: "-0.02em",
 					fontWeight: "700",
 				},
+			],
+			"title-lg": [
+				"clamp(30px,25px + 2vw,40px)",
+				{ fontFamily: "var(--title-font)" },
 			],
 		},
 		container: {

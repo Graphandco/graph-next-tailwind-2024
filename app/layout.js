@@ -62,7 +62,7 @@ export default function RootLayout({ children }) {
 					// disableTransitionOnChange
 				>
 					<Header />
-					<main className="container mt-5 grow">{children}</main>
+					<main className="grow">{children}</main>
 					<Toaster />
 				</ThemeProvider>
 			</body>

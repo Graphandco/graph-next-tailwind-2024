@@ -12,7 +12,8 @@
 		--card-foreground: hsl(20deg 14.3% 4.1%);
 		--popover: hsl(0deg 0% 100%);
 		--popover-foreground: hsl(20deg 14.3% 4.1%);
-		--primary: hsl(41.92deg 90% 50%);
+		// --primary: hsl(41.92deg 90% 50%);
+		--primary: hsl(42 90% 40% / 1);
 		--primary-foreground: hsl(26deg 83.3% 14.1%);
 		--secondary: hsl(60deg 4.8% 95.9%);
 		--secondary-foreground: hsl(24deg 9.8% 10%);
@@ -78,28 +79,26 @@ body {
 		z-index: -2;
 	}
 }
-h1 {
+h1,
+.hero-title {
 	position: relative;
 	margin: 0 auto;
 	padding-block: 2rem;
 	padding-left: 1rem;
-	text-transform: uppercase;
+	// text-transform: uppercase;
 	font-family: var(--title-font);
 	font-size: clamp(38px, 28px + 2vw, 50px);
 	letter-spacing: 0.15rem;
 	line-height: 1;
-	text-transform: uppercase;
-	// text-shadow: 0 0 80px rgba(255, 255, 255, 0.5);
 	display: inline-block;
-	// background: linear-gradient(to right, #a855f7, #ec4899, #eab308, #ec4899, #a855f7, #ec4899, #eab308);
 	background: linear-gradient(
 		to right,
 		var(--primary),
-		white,
+		var(--contrast),
 		var(--primary),
-		white,
+		var(--contrast),
 		var(--primary),
-		white,
+		var(--contrast),
 		var(--primary)
 	);
 	background-size: 300% 300%;
@@ -118,6 +117,13 @@ h1 {
 		background-color: var(--primary);
 	}
 }
+.hero-title {
+	font-size: clamp(50px, 20px + 5vw, 80px);
+	padding: 0;
+	&:before {
+		content: none;
+	}
+}
 @keyframes gradient {
 	0% {
 		background-position: 0% 50%;
@@ -125,4 +131,240 @@ h1 {
 	100% {
 		background-position: 100% 50%;
 	}
+}
+
+/********************************************************
+    BURGER BUTTON
+********************************************************/
+
+.header-burger {
+	position: relative;
+	height: 28px;
+	width: 36px;
+	cursor: pointer;
+	border-radius: 50%;
+	z-index: 9;
+
+	.line-top,
+	.line-middle,
+	.line-bottom {
+		position: absolute;
+		display: block;
+		height: 4px;
+		width: 36px;
+		border-radius: 2px;
+		background: var(--primary);
+	}
+
+	.line-top {
+		top: 0;
+		transform-origin: 34px 2px;
+	}
+
+	.line-middle {
+		top: 12px;
+		transition: opacity 200ms linear;
+	}
+
+	.line-bottom {
+		bottom: 0;
+		transform-origin: 34px 2px;
+	}
+
+	&.open {
+		.line-top {
+			animation: line-top-out 600ms linear normal;
+			animation-fill-mode: forwards;
+		}
+		.line-middle {
+			opacity: 0;
+		}
+		.line-bottom {
+			animation: line-bot-out 600ms linear normal;
+			animation-fill-mode: forwards;
+		}
+	}
+
+	&.close {
+		.line-top {
+			animation: line-top-in 600ms linear normal;
+			animation-fill-mode: forwards;
+		}
+		.line-middle {
+			transition-delay: 200ms;
+		}
+		.line-bottom {
+			animation: line-bot-in 600ms linear normal;
+			animation-fill-mode: forwards;
+		}
+	}
+}
+@keyframes line-top-in {
+	0% {
+		left: -5px;
+		bot: 0;
+		transform: rotate(-45deg);
+	}
+	20% {
+		left: -5px;
+		bot: 0;
+		transform: rotate(-60deg);
+	}
+	80% {
+		left: 0;
+		bot: 0;
+		transform: rotate(15deg);
+	}
+	100% {
+		left: 0;
+		bot: 1px;
+		transform: rotate(0deg);
+	}
+}
+
+@keyframes line-top-out {
+	0% {
+		left: 0;
+		top: 0;
+		transform: rotate(0deg);
+	}
+	20% {
+		left: 0;
+		top: 0;
+		transform: rotate(15deg);
+	}
+	80% {
+		left: -5px;
+		top: 0;
+		transform: rotate(-60deg);
+	}
+	100% {
+		left: -5px;
+		top: 1px;
+		transform: rotate(-45deg);
+	}
+}
+
+@keyframes line-bot-in {
+	0% {
+		left: -5px;
+		transform: rotate(45deg);
+	}
+	20% {
+		left: -5px;
+		bot: 0;
+		transform: rotate(60deg);
+	}
+	80% {
+		left: 0;
+		bot: 0;
+		transform: rotate(-15deg);
+	}
+	100% {
+		left: 0;
+		transform: rotate(0deg);
+	}
+}
+
+@keyframes line-bot-out {
+	0% {
+		left: 0;
+		transform: rotate(0deg);
+	}
+	20% {
+		left: 0;
+		transform: rotate(-15deg);
+	}
+	80% {
+		left: -5px;
+		transform: rotate(60deg);
+	}
+	100% {
+		left: -5px;
+		transform: rotate(45deg);
+	}
+}
+
+/*MENU CONTENT*/
+.burger-menu-wrapper {
+	height: 100vh;
+	// background-color: var(--overlay);
+	border-left: 1px solid rgba(white, 0.1);
+	min-width: 300px;
+	position: fixed;
+	right: 0;
+	top: 0;
+	color: white;
+	z-index: 3;
+	&:before {
+		content: "";
+		position: absolute;
+		inset: 0;
+		background-color: var(--overlay);
+		backdrop-filter: blur(4px);
+		z-index: -1;
+	}
+	.burger-menu-content {
+		box-sizing: border-box;
+		height: 100%;
+		padding: 5vw 17vw 10vw 12vw;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+		.burger-menu-nav {
+			display: flex;
+			flex-direction: column;
+			gap: 12px;
+			margin-top: 80px;
+
+			.burger-menu-header {
+				color: rgb(153, 153, 153);
+				border-bottom: 1px solid rgb(153, 153, 153);
+				text-transform: uppercase;
+				font-size: 13px;
+				margin-bottom: 40px;
+				p {
+					margin-bottom: 5px;
+				}
+			}
+
+			.navlink:before {
+				bottom: 17px;
+				left: -15px;
+			}
+
+			.link {
+				position: relative;
+				display: flex;
+				align-items: center;
+				font-size: clamp(27px, 10px + 3vw, 40px);
+				margin-block: 2rem;
+
+				// .indicator {
+				//     width: 10px;
+				//     height: 10px;
+				//     background-color: white;
+				//     border-radius: 50%;
+				//     position: absolute;
+				//     left: -20px;
+				// }
+			}
+
+			a {
+				text-decoration: none;
+				color: var(--contrast);
+				font-weight: 300;
+			}
+		}
+	}
+}
+.svg-curve {
+	position: absolute;
+	top: 0;
+	left: -99px;
+	width: 100px;
+	height: 100%;
+	fill: var(--overlay);
+	stroke: none;
 }
