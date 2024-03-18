@@ -1,11 +1,7 @@
 ---
 title: "Banana Bread"
-prep_time: "15 minutes"
-cook_time: "60 minutes"
 description: "Moist and flavorful bread made with ripe bananas, perfect for breakfast or a snack."
 ---
-
-# Classic Banana Bread
 
 ## Ingredients
 

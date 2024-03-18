@@ -371,3 +371,27 @@ h1,
 	fill: var(--bg-burgermenu);
 	stroke: none;
 }
+.blog-post {
+	@media (width > 767px) {
+		column-count: 2;
+		column-gap: 2rem;
+	}
+	h2 {
+		font-size: clamp(30px, 25px + 2vw, 40px);
+		font-family: var(--title-font);
+		color: var(--primary);
+		margin-top: 2rem;
+		margin-bottom: 1rem;
+		line-height: 1;
+	}
+	strong {
+		font-weight: 900;
+	}
+	a {
+		color: var(--contrast);
+		text-decoration: underline;
+		&:hover {
+			color: var(--primary);
+		}
+	}
+}

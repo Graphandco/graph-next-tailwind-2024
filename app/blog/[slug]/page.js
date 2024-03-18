@@ -17,12 +17,12 @@ export const generateStaticParams = async () => {
 	const posts = getPostMetadata("blogposts");
 	return posts.map((post) => ({ slug: post.slug }));
 };
-
 export async function generateMetadata({ params, searchParams }) {
-	const id = params?.slug ? " ⋅ " + params?.slug : "";
+	const posts = getPostMetadata("blogposts");
+	const post = posts.find((post) => post.slug === params.slug);
 	return {
-		title: `${id.replaceAll("_", " ")}  | Graph and Co`,
-		description: "test",
+		title: `${post.title}  | Graph and Co`,
+		description: `${post.description}`,
 	};
 }
 
@@ -31,10 +31,11 @@ export default function RecipePage(props) {
 	const post = getPostContent(slug);
 	// console.log(post);
 	return (
-		<main>
-			<article>
+		<article className="container">
+			<h1>{post.data.title}</h1>
+			<div className="blog-post">
 				<Markdown>{post.content}</Markdown>
-			</article>
-		</main>
+			</div>
+		</article>
 	);
 }

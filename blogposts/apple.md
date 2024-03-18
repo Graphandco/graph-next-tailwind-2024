@@ -1,11 +1,7 @@
 ---
 title: "Chocolate Chip Cookies"
-prep_time: "90 minutes"
-cook_time: "60 minutes"
 description: "A traditional pie with a flaky crust and a sweet, spiced apple filling, perfect for any occasion."
 ---
-
-# Classic Apple Pie
 
 ## Ingredients
 
