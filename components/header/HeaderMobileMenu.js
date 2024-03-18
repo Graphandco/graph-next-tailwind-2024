@@ -51,6 +51,16 @@ export default function HeaderMobileMenu({ navLinks, pathname }) {
 						<p>Un métier, une passion</p>
 					</div>
 					<nav className="mobile-nav-items">
+						<motion.div
+							variants={slide}
+							initial="initial"
+							animate="enter"
+							exit="exit"
+							custom="1"
+							className="absolute top-4 left-8"
+						>
+							<ModeToggle />
+						</motion.div>
 						{navLinks.map((link, index) => {
 							return (
 								<motion.div
@@ -75,16 +85,6 @@ export default function HeaderMobileMenu({ navLinks, pathname }) {
 								</motion.div>
 							);
 						})}
-						<motion.div
-							variants={slide}
-							initial="initial"
-							animate="enter"
-							exit="exit"
-							custom="5"
-							className="absolute top-4 left-8"
-						>
-							<ModeToggle />
-						</motion.div>
 					</nav>
 				</div>
 			</div>

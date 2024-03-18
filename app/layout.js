@@ -33,12 +33,6 @@ const foundation = localFont({
 	variable: "--foundation",
 });
 
-export const metadata = {
-	title: "Graph and Co, créateur de sites web près de Colmar",
-	description:
-		"Nous sommes une agence web basée près de Colmar spécialisée dans la réalisation de sites web modernes et intuitifs",
-};
-
 export default function RootLayout({ children }) {
 	return (
 		<html lang="fr" className="dark" suppressHydrationWarning>

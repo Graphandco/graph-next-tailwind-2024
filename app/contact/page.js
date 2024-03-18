@@ -1,7 +1,7 @@
 export const metadata = {
-	title: "Nos prestations de créations de sites Web  | Graph and Co",
+	title: "Contactez-nous | Graph and Co",
 	description:
-		"Découvrez nos différentes offres et offrez-vous un site web adapté à vos besoins et à votre budget",
+		"Laissez-nous un message pour toute demande d'information sur la création de votre site web à Colmarf",
 };
 
 const Contact = () => {
