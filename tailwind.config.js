@@ -31,6 +31,10 @@ module.exports = {
 				"clamp(30px,25px + 2vw,40px)",
 				{ fontFamily: "var(--title-font)" },
 			],
+			"last-reas-title": [
+				"clamp(30px,20px + 2vw,45px)",
+				// { fontFamily: "var(--title-font)" },
+			],
 		},
 		container: {
 			center: true,
@@ -38,6 +42,22 @@ module.exports = {
 			screens: {
 				"2xl": "1400px",
 			},
+		},
+		screens: {
+			sm: "640px",
+			// => @media (min-width: 640px) { ... }
+
+			md: "768px",
+			// => @media (min-width: 768px) { ... }
+
+			lg: "1024px",
+			// => @media (min-width: 1024px) { ... }
+
+			xl: "1280px",
+			// => @media (min-width: 1280px) { ... }
+
+			"2xl": "1536px",
+			// => @media (min-width: 1536px) { ... }
 		},
 		extend: {
 			fontFamily: {

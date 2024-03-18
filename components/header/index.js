@@ -44,7 +44,7 @@ const Header = () => {
 	return (
 		<motion.header className="sticky top-0 z-50 overflow-hidden w-full border-b border-card">
 			<div
-				className="header-overlay absolute inset-0 bg-overlay -z-10 backdrop-blur-sm backdrop-saturate-150"
+				className="header-overlay absolute inset-0 bg-overlay -z-10 backdrop-blur-sm backdrop-saturate-150 opacity-100"
 				style={{ opacity: dynamicOpacity }}
 			></div>
 			<div className="container py-3 flex justify-between items-center">

@@ -1,3 +1,5 @@
+import OutilsIcons from "./OutilsIcons";
+
 export const metadata = {
 	title: "Nos prestations de créations de sites Web  | Graph and Co",
 	description:
@@ -8,6 +10,7 @@ const Prestations = () => {
 	return (
 		<>
 			<h1>Prestations</h1>
+			<OutilsIcons />
 		</>
 	);
 };

@@ -33,7 +33,7 @@ const Atouts = () => {
 				<h2 className="text-title-lg text-contrast font-title">
 					Les atouts de votre site
 				</h2>
-				<div className="grid grid-cols-1 md:grid-cols-4 gap-5">
+				<div className="grid grid-cols-2 lg:grid-cols-4 gap-5">
 					{item.map((item, index) => (
 						<div
 							key={index}
@@ -43,7 +43,9 @@ const Atouts = () => {
 								{item.icon}
 							</div>
 							<div className="text-contrast">{item.title}</div>
-							<div className="text-xs">{item.description}</div>
+							<div className="text-xs leading-5">
+								{item.description}
+							</div>
 						</div>
 					))}
 				</div>

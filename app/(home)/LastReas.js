@@ -87,7 +87,7 @@ const Link = ({ heading, imgSrc, subheading, href }) => {
 						staggerChildren: 0.075,
 						delayChildren: 0.25,
 					}}
-					className="relative z-10 block text-4xl font-bold text-neutral-500 transition-colors duration-500 md:text-6xl"
+					className="relative z-10 block font-bold text-neutral-500 transition-colors duration-500 md:text-6xl"
 				>
 					<>
 						<span className="text-primary pr-2">#</span>
@@ -99,7 +99,7 @@ const Link = ({ heading, imgSrc, subheading, href }) => {
 								whileHover: { x: 16 },
 							}}
 							transition={{ type: "spring" }}
-							className="inline-block text-3xl text-contrast group-hover:text-primary"
+							className="inline-block text-last-reas-title  text-contrast group-hover:text-primary"
 							key={i}
 						>
 							{letter}
