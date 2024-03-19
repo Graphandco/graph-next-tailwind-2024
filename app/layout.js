@@ -40,8 +40,10 @@ export default function RootLayout({ children }) {
 			<head />
 			<body
 				className={`${mostranuova.variable} ${mostranuova2.variable} ${foundation.variable}`}
+				style={{ backgroundImage: `url("/img/site-bg.svg")` }}
+				suppressHydrationWarning={true}
 			>
-				<div className="site-bg fixed inset-0 -z-10 object-top">
+				{/* <div className="site-bg fixed inset-0 -z-10 object-top">
 					<Image
 						className="object-cover brightness-[3.5] dark:brightness-[-10]"
 						src="/img/site-bg.svg"
@@ -49,7 +51,7 @@ export default function RootLayout({ children }) {
 						fill={true}
 						priority
 					/>
-				</div>
+				</div> */}
 				<ThemeProvider
 					attribute="class"
 					defaultTheme="system"
