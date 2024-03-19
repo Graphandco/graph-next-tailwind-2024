@@ -18,7 +18,7 @@ const Hero = () => {
 		duration: 0.3,
 	};
 	return (
-		<div className="hero container flex flex-col-reverse justify-center md:grid md:grid-cols-[1.5fr_1fr] items-center min-h-[calc(100vh-64px)]">
+		<div className="hero container flex flex-col-reverse justify-center md:grid md:grid-cols-[1.5fr_1fr] items-center">
 			<div className="grid grid-cols-1">
 				<div className="grid gap-5 py-5">
 					<div className="uppercase text-contrast">

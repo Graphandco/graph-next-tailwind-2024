@@ -138,6 +138,10 @@ h1,
 		background-color: var(--primary);
 	}
 }
+.hero {
+	min-height: calc(100svh - 64px);
+	min-height: calc(100dvh - 64px);
+}
 .hero-title {
 	font-size: clamp(50px, 20px + 5vw, 80px);
 	padding: 0;

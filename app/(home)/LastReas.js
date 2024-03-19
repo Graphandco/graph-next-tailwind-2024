@@ -13,25 +13,25 @@ export const LastReas = () => {
 				<Link
 					heading="3ème chance"
 					subheading="Comportementaliste animalier à Strasbourg"
-					imgSrc="/img/cover-troisieme-chance.jpg"
+					imgSrc="/img/troisieme-chance.webp"
 					href="#"
 				/>
 				<Link
 					heading="Bomot"
 					subheading="Écrivain, auteure, biographe"
-					imgSrc="/img/cover-bomot.jpg"
+					imgSrc="/img/bomot.webp"
 					href="#"
 				/>
 				<Link
 					heading="Hola Maté"
 					subheading="Boutique de maté à Strabourg"
-					imgSrc="/img/cover-hola-mate.jpg"
+					imgSrc="/img/holamate.webp"
 					href="#"
 				/>
 				<Link
 					heading="Loide Guitare"
 					subheading="Créateur de guitares originales"
-					imgSrc="/img/cover-loide.jpg"
+					imgSrc="/img/loide.webp"
 					href="#"
 				/>
 			</div>
