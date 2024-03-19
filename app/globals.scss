@@ -1,6 +1,21 @@
+@use "sass:map";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+$breakpoints: (
+	xs: 400px,
+	s: 550px,
+	mobile: 768px,
+	tablet: 1024px,
+);
+
+@mixin mq($key) {
+	$size: map.get($breakpoints, $key);
+	@media (max-width: $size) {
+		@content;
+	}
+}
 
 @layer base {
 	:root {
@@ -8,7 +23,7 @@
 		--contrast: hsl(0deg 0% 0%);
 		--background: hsl(0deg 0% 100%);
 		--foreground: hsl(0deg 0% 20%);
-		--bg-burgermenu: hsl(20deg 14.3% 4.1% / 40%);
+		--bg-burgermenu: hsl(20deg 14.3% 4.1% / 50%);
 		--card: hsl(0deg 0% 100%);
 		--overlay: hsl(0deg, 0%, 100%, 40%);
 		--card-foreground: hsl(20deg 14.3% 4.1%);
@@ -36,7 +51,7 @@
 		--background: hsl(20deg 14.3% 4.1%);
 		// --foreground: hsl(0deg 0% 50%);
 		--foreground: hsl(271.76deg 11.11% 70%);
-		--bg-burgermenu: hsl(20deg 14.3% 4.1% / 40%);
+		--bg-burgermenu: hsl(20deg 14.3% 4.1% / 50%);
 		// --card: hsl(20deg 14.3% 4.1%);
 		--card: hsl(216deg 19.08% 25.69%);
 		--overlay: hsl(216deg, 19.08%, 25.69%, 70%);
@@ -61,6 +76,8 @@
 * {
 	@apply border-border;
 }
+@import "../styles/header";
+@import "../styles/grid-reas";
 body {
 	@apply bg-background text-foreground font-text text-base;
 	display: flex;
@@ -68,20 +85,21 @@ body {
 	min-height: 100vh;
 	min-height: 100dvh;
 	font-size: 1.3rem;
-	background: linear-gradient(to bottom, var(--secondary), black)
-		var(--secondary);
-	background-attachment: fixed;
-	position: relative;
-	isolation: isolate;
-	&:after {
-		content: "";
-		position: absolute;
-		inset: 0;
-		background-color: var(--background);
-		opacity: 0.4;
-		z-index: -2;
-	}
+	// background: linear-gradient(to bottom, var(--secondary), black)
+	// 	var(--secondary);
+	// background-attachment: fixed;
+	// position: relative;
+	// isolation: isolate;
+	// &:after {
+	// 	content: "";
+	// 	position: absolute;
+	// 	inset: 0;
+	// 	background-color: var(--background);
+	// 	opacity: 0.4;
+	// 	z-index: -2;
+	// }
 }
+
 h1,
 .hero-title {
 	position: relative;
@@ -136,241 +154,6 @@ h1,
 	}
 }
 
-/********************************************************
-    BURGER BUTTON
-********************************************************/
-
-.header-burger {
-	position: relative;
-	height: 28px;
-	width: 36px;
-	cursor: pointer;
-	border-radius: 50%;
-	z-index: 9;
-
-	.line-top,
-	.line-middle,
-	.line-bottom {
-		position: absolute;
-		display: block;
-		height: 4px;
-		width: 36px;
-		border-radius: 2px;
-		background: var(--primary);
-	}
-
-	.line-top {
-		top: 0;
-		transform-origin: 34px 2px;
-	}
-
-	.line-middle {
-		top: 12px;
-		transition: opacity 200ms linear;
-	}
-
-	.line-bottom {
-		bottom: 0;
-		transform-origin: 34px 2px;
-	}
-
-	&.open {
-		.line-top {
-			animation: line-top-out 600ms linear normal;
-			animation-fill-mode: forwards;
-		}
-		.line-middle {
-			opacity: 0;
-		}
-		.line-bottom {
-			animation: line-bot-out 600ms linear normal;
-			animation-fill-mode: forwards;
-		}
-	}
-
-	&.close {
-		.line-top {
-			animation: line-top-in 600ms linear normal;
-			animation-fill-mode: forwards;
-		}
-		.line-middle {
-			transition-delay: 200ms;
-		}
-		.line-bottom {
-			animation: line-bot-in 600ms linear normal;
-			animation-fill-mode: forwards;
-		}
-	}
-}
-@keyframes line-top-in {
-	0% {
-		left: -5px;
-		bot: 0;
-		transform: rotate(-45deg);
-	}
-	20% {
-		left: -5px;
-		bot: 0;
-		transform: rotate(-60deg);
-	}
-	80% {
-		left: 0;
-		bot: 0;
-		transform: rotate(15deg);
-	}
-	100% {
-		left: 0;
-		bot: 1px;
-		transform: rotate(0deg);
-	}
-}
-
-@keyframes line-top-out {
-	0% {
-		left: 0;
-		top: 0;
-		transform: rotate(0deg);
-	}
-	20% {
-		left: 0;
-		top: 0;
-		transform: rotate(15deg);
-	}
-	80% {
-		left: -5px;
-		top: 0;
-		transform: rotate(-60deg);
-	}
-	100% {
-		left: -5px;
-		top: 1px;
-		transform: rotate(-45deg);
-	}
-}
-
-@keyframes line-bot-in {
-	0% {
-		left: -5px;
-		transform: rotate(45deg);
-	}
-	20% {
-		left: -5px;
-		bot: 0;
-		transform: rotate(60deg);
-	}
-	80% {
-		left: 0;
-		bot: 0;
-		transform: rotate(-15deg);
-	}
-	100% {
-		left: 0;
-		transform: rotate(0deg);
-	}
-}
-
-@keyframes line-bot-out {
-	0% {
-		left: 0;
-		transform: rotate(0deg);
-	}
-	20% {
-		left: 0;
-		transform: rotate(-15deg);
-	}
-	80% {
-		left: -5px;
-		transform: rotate(60deg);
-	}
-	100% {
-		left: -5px;
-		transform: rotate(45deg);
-	}
-}
-
-/*MENU CONTENT*/
-.burger-menu-wrapper {
-	height: 100vh;
-	// background-color: var(--overlay);
-	border-left: 1px solid rgba(white, 0.1);
-	min-width: 300px;
-	position: fixed;
-	right: 0;
-	top: 0;
-	color: white;
-	z-index: 3;
-	&:before {
-		content: "";
-		position: absolute;
-		inset: 0;
-		background-color: var(--bg-burgermenu);
-		backdrop-filter: blur(4px);
-		z-index: -1;
-	}
-	.burger-menu-content {
-		box-sizing: border-box;
-		height: 100%;
-		padding: 5vw 17vw 10vw 12vw;
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-
-		.burger-menu-nav {
-			display: flex;
-			flex-direction: column;
-			gap: 12px;
-			margin-top: 80px;
-
-			.burger-menu-header {
-				color: rgb(153, 153, 153);
-				border-bottom: 1px solid rgb(153, 153, 153);
-				text-transform: uppercase;
-				font-size: 13px;
-				margin-bottom: 40px;
-				p {
-					margin-bottom: 5px;
-				}
-			}
-
-			.navlink:before {
-				bottom: 17px;
-				left: -15px;
-			}
-
-			.link {
-				position: relative;
-				display: flex;
-				align-items: center;
-				font-size: clamp(27px, 10px + 3vw, 40px);
-				margin-block: 2rem;
-
-				// .indicator {
-				//     width: 10px;
-				//     height: 10px;
-				//     background-color: white;
-				//     border-radius: 50%;
-				//     position: absolute;
-				//     left: -20px;
-				// }
-			}
-
-			a {
-				text-decoration: none;
-				color: var(--contrast);
-				font-weight: 300;
-			}
-		}
-	}
-}
-.svg-curve {
-	position: absolute;
-	top: 0;
-	left: -99px;
-	width: 100px;
-	height: 100%;
-	fill: var(--bg-burgermenu);
-	stroke: none;
-}
 .blog-post {
 	@media (width > 767px) {
 		column-count: 2;

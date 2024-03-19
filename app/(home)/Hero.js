@@ -1,10 +1,22 @@
+"use client";
 import LottieRocket from "@/components/lottie/LottieRocket";
 import CustomButton from "@/components/ui/CustomButton";
 // import CustomButton from "@/components/ui/CustomButton";
 import Magnetic from "@/components/ui/Magnetic";
 import React from "react";
+import { motion } from "framer-motion";
 
 const Hero = () => {
+	const rocket = {
+		// type: 'spring',
+		// damping: 15,
+		// stiffness: 200,
+		duration: 0.75,
+		delay: 0.3,
+	};
+	const content = {
+		duration: 0.3,
+	};
 	return (
 		<div className="hero container flex flex-col-reverse justify-center md:grid md:grid-cols-[1.5fr_1fr] items-center min-h-[calc(100vh-64px)]">
 			<div className="grid grid-cols-1">
@@ -21,9 +33,14 @@ const Hero = () => {
 					<CustomButton secondary>Voir nos prestations</CustomButton>
 				</div>
 			</div>
-			<div className="w-40 h-36 md:w-72 md:h-70 mx-auto">
+			<motion.div
+				className="hero-lottie"
+				transition={rocket}
+				initial={{ y: "700px" }}
+				animate={{ y: "0px" }}
+			>
 				<LottieRocket />
-			</div>
+			</motion.div>
 		</div>
 	);
 };

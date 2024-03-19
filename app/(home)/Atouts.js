@@ -1,3 +1,4 @@
+import { ScreenFitText } from "@/components/ui/ScreenFitText";
 import { FaPaintBrush, FaUserAlt, FaLock, FaMobileAlt } from "react-icons/fa";
 
 const Atouts = () => {
@@ -33,6 +34,7 @@ const Atouts = () => {
 				<h2 className="text-title-lg text-contrast font-title">
 					Les atouts de votre site
 				</h2>
+				<ScreenFitText text="Les atouts de votre site" />
 				<div className="grid grid-cols-2 lg:grid-cols-4 gap-5">
 					{item.map((item, index) => (
 						<div

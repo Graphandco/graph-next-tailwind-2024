@@ -1,3 +1,5 @@
+import GridReas from "./GridReas";
+
 export const metadata = {
 	title: "Nos prestations de créations de sites Web  | Graph and Co",
 	description:
@@ -8,6 +10,7 @@ const Realisations = () => {
 	return (
 		<>
 			<h1>Réalisations</h1>
+			<GridReas />
 		</>
 	);
 };

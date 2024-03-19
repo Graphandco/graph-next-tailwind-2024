@@ -19,7 +19,7 @@ Next.js offre également des fonctionnalités intégrées pour optimiser le réf
 
 En plus de ses avantages pour le référencement, Next.js offre également une **expérience de développement conviviale et flexible**. Avec sa prise en charge du rendu côté serveur et du rendu côté client, vous pouvez créer **des applications web dynamiques et interactives** tout en bénéficiant d'une architecture solide et bien organisée.
 
-Chez Graph and Co, nous sommes des **experts dans le développement avec Next.js**. Consultez nos [réalisations](/realisations) pour découvrir les projets que nous avons réalisés pour nos clients. Vous pouvez également en apprendre plus sur nos [prestations](/prestations) pour voir comment nous pouvons vous aider à atteindre vos objectifs en matière de développement web.
+Chez Graph and Co, nous sommes des **experts dans le développement avec Next.js**. Consultez [nos réalisations](/realisations) pour découvrir les projets que nous avons réalisés pour nos clients. Vous pouvez également en apprendre plus sur [nos prestations](/prestations) pour voir comment nous pouvons vous aider à atteindre vos objectifs en matière de développement web.
 
 Pour discuter de votre prochain projet ou pour toute question, n'hésitez pas à [nous contacter](/contact). Nous serions ravis de vous aider à tirer le meilleur parti de Next.js pour votre site web.
 
