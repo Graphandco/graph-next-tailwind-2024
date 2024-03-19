@@ -139,8 +139,9 @@ h1,
 	}
 }
 .hero {
-	min-height: calc(100svh - 64px);
+	min-height: calc(100vh - 64px);
 	min-height: calc(100dvh - 64px);
+	min-height: calc(100svh - 64px);
 }
 .hero-title {
 	font-size: clamp(50px, 20px + 5vw, 80px);
