@@ -2,7 +2,7 @@ import { ScreenFitText } from "@/components/ui/ScreenFitText";
 import { FaPaintBrush, FaUserAlt, FaLock, FaMobileAlt } from "react-icons/fa";
 
 const Atouts = () => {
-	const item = [
+	const items = [
 		{
 			title: "Interface utilisateur",
 			description:
@@ -36,7 +36,7 @@ const Atouts = () => {
 				</h2>
 				<ScreenFitText text="Les atouts de votre site" />
 				<div className="grid grid-cols-2 lg:grid-cols-4 gap-5">
-					{item.map((item, index) => (
+					{items.map((item, index) => (
 						<div
 							key={index}
 							className="atout-card overflow-hidden grid justify-center items-center text-center gap-3 border border-primary p-6 rounded-xl"

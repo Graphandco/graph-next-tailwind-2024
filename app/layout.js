@@ -39,7 +39,7 @@ export default function RootLayout({ children }) {
 		<html lang="fr" className="dark" suppressHydrationWarning>
 			<head />
 			<body
-				className={`${mostranuova.variable} ${mostranuova2.variable} ${foundation.variable}`}
+				className={`${mostranuova.variable} ${mostranuova2.variable} ${foundation.variable} bg-fixed bg-cover`}
 				style={{ backgroundImage: `url("/img/site-bg.svg")` }}
 				suppressHydrationWarning={true}
 			>
