@@ -15,6 +15,7 @@
     "framer-motion": "^10.12.5-alpha.1",
     "gray-matter": "^4.0.3",
     "gsap": "^3.12.5",
+    "locomotive-scroll": "^4.1.4",
     "lottie-react": "^2.4.0",
     "lucide-react": "^0.358.0",
     "markdown-to-jsx": "^7.4.3",

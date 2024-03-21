@@ -16,7 +16,38 @@ module.exports = {
 					lineHeight: "1.8rem",
 					letterSpacing: "-0.01em",
 					fontWeight: "500",
-					letterSpacing: "0.01erm",
+				},
+			],
+			xs: [
+				"1rem",
+				{
+					lineHeight: "1.8rem",
+					letterSpacing: "-0.01em",
+					fontWeight: "500",
+				},
+			],
+			sm: [
+				"1.1rem",
+				{
+					lineHeight: "1.6rem",
+					letterSpacing: "-0.01em",
+					fontWeight: "500",
+				},
+			],
+			lg: [
+				"1.4rem",
+				{
+					lineHeight: "1.6rem",
+					letterSpacing: "-0.01em",
+					fontWeight: "500",
+				},
+			],
+			xl: [
+				"clamp(30px,20px + 2vw,45px)",
+				{
+					lineHeight: "1.5rem",
+					letterSpacing: "-0.01em",
+					fontWeight: "500",
 				},
 			],
 			"3xl": [

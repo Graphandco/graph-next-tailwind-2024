@@ -1,6 +1,6 @@
 "use client";
 import { useLottie } from "lottie-react";
-import rocket from "./rocket-dark-mode.json";
+import rocket from "./animation.json";
 
 function LottieRocket() {
 	const defaultOptions = {

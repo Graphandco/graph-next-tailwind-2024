@@ -58,7 +58,8 @@ $breakpoints: (
 		--card-foreground: hsl(60deg 9.1% 97.8%);
 		--popover: hsl(20deg 14.3% 4.1%);
 		--popover-foreground: hsl(60deg 9.1% 97.8%);
-		--primary: hsl(47.9deg 95.8% 53.1%);
+		// --primary: hsl(47.9deg 95.8% 53.1%);
+		--primary: hsl(41.92deg 89.8% 50%);
 		--primary-foreground: hsl(26deg 83.3% 14.1%);
 		--secondary: hsl(12deg 6.5% 15.1%);
 		--secondary-foreground: hsl(60deg 9.1% 97.8%);
@@ -78,6 +79,8 @@ $breakpoints: (
 }
 @import "../styles/header";
 @import "../styles/grid-reas";
+@import "../styles/custom-btn";
+
 body {
 	@apply bg-background text-foreground font-text text-base;
 	display: flex;
@@ -98,6 +101,14 @@ body {
 	// 	opacity: 0.4;
 	// 	z-index: -2;
 	// }
+	&:before {
+		content: "";
+		position: fixed;
+		inset: 0;
+		background-color: var(--background);
+		opacity: 0.4;
+		z-index: -1;
+	}
 }
 
 h1,

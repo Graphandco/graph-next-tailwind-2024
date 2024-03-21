@@ -15,7 +15,7 @@ const HeaderNav = ({ navLinks }) => {
 					<Magnetic key={link.href} className="">
 						<Link
 							href={link.href}
-							className={`inline-block relative before:content-[''] before:absolute before:-left-3 before:bottom-[5px] before:w-[6px] before:h-[6px] before:rounded-full before:bg-primary before:transition-all hover:before:translate-y-0 before:opacity-0 hover:before:opacity-100 hover:text-contrast  ${
+							className={`inline-block relative before:content-[''] before:absolute before:-left-3 before:bottom-[8px] before:w-[6px] before:h-[6px] before:rounded-full before:bg-primary before:transition-all hover:before:translate-y-0 before:opacity-0 hover:before:opacity-100 hover:text-contrast  ${
 								pathname === link.href
 									? "text-contrast before:opacity-100 before:translate-y-0"
 									: "text-foreground before:-translate-y-5"

@@ -29,17 +29,17 @@ const Atouts = () => {
 		},
 	];
 	return (
-		<section className=" bg-black/5 dark:bg-white/5">
+		<section className="">
 			<div className="container py-28 grid gap-5">
-				<h2 className="text-title-lg text-contrast font-title">
-					Les atouts de votre site
-				</h2>
-				<ScreenFitText text="Les atouts de votre site" />
+				<div className="-translate-y-8">
+					<ScreenFitText text="Les atouts de votre site" />
+				</div>
+
 				<div className="grid grid-cols-2 lg:grid-cols-4 gap-5">
 					{items.map((item, index) => (
 						<div
 							key={index}
-							className="atout-card overflow-hidden grid justify-center items-center text-center gap-3 border border-primary p-6 rounded-xl"
+							className="atout-card backdrop-blur-md overflow-hidden grid justify-center items-center text-center gap-3 bg-black/5 dark:bg-white/5 p-6 rounded-xl"
 						>
 							<div className="text-primary mx-auto text-3xl">
 								{item.icon}

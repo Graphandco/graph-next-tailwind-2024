@@ -1,7 +1,7 @@
 export const metadata = {
 	title: "Contactez-nous | Graph and Co",
 	description:
-		"Laissez-nous un message pour toute demande d'information sur la création de votre site web à Colmarf",
+		"Laissez-nous un message pour toute demande d'information sur la création de votre site web à Colmar",
 };
 
 const Contact = () => {

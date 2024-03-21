@@ -9,7 +9,7 @@ export const LastReas = () => {
 			<h2 className="text-title-lg text-contrast font-title">
 				Nos dernières réalisations
 			</h2>
-			<div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+			<div className="grid grid-cols-1 md:grid-cols-2 gap-10">
 				<Link
 					heading="3ème chance"
 					subheading="Comportementaliste animalier à Strasbourg"
@@ -99,14 +99,14 @@ const Link = ({ heading, imgSrc, subheading, href }) => {
 								whileHover: { x: 16 },
 							}}
 							transition={{ type: "spring" }}
-							className="inline-block text-last-reas-title  text-contrast group-hover:text-primary"
+							className="inline-block text-last-reas-title text-contrast group-hover:text-primary"
 							key={i}
 						>
 							{letter}
 						</motion.span>
 					))}
 				</motion.span>
-				<span className="relative z-10 mt-2 max-w-60 block text-base transition-colors duration-500 group-hover:text-contrast">
+				<span className="relative z-10 mt-2 max-w-60 block text-base transition-colors duration-500 group-hover:text-contrast leading-[1.2]">
 					{subheading}
 				</span>
 			</div>
@@ -142,7 +142,7 @@ const Link = ({ heading, imgSrc, subheading, href }) => {
 				transition={{ type: "spring" }}
 				className="relative z-10 p-4"
 			>
-				<FiArrowRight className="text-5xl text-neutral-50" />
+				<FiArrowRight className="text-xl text-contrast" />
 			</motion.div>
 		</motion.a>
 	);

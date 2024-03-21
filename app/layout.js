@@ -5,6 +5,7 @@ import Image from "next/image";
 import localFont from "next/font/local";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import { SmoothScrollProvider } from "@/context/SmoothScrollContext";
 
 const mostranuova = localFont({
 	src: [
@@ -58,10 +59,12 @@ export default function RootLayout({ children }) {
 					enableSystem
 					// disableTransitionOnChange
 				>
+					{/* <SmoothScrollProvider options={{ smooth: true }}> */}
 					<Header />
 					<main className="grow">{children}</main>
 					<Footer />
 					<Toaster />
+					{/* </SmoothScrollProvider> */}
 				</ThemeProvider>
 			</body>
 		</html>

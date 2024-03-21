@@ -6,10 +6,10 @@ import Magnetic from "../ui/Magnetic";
 
 const Footer = () => {
 	return (
-		<footer className="bg-background py-12 gap-5">
-			<div className="container grid grid-cols-2 lg:grid-cols-4">
-				<div className="grid justify-center gap-3 text-center">
-					<div className="text-contrast font-title uppercase text-xl">
+		<footer className="bg-background py-12">
+			<div className="container grid grid-cols-2 lg:grid-cols-4  gap-x-4 gap-y-8">
+				<div className="grid justify-center gap-4 text-center">
+					<div className="text-contrast font-title uppercase text-lg">
 						Nous appeler
 					</div>
 					<Magnetic>
@@ -25,14 +25,14 @@ const Footer = () => {
 						<a
 							title="M'appeler"
 							href="tel:0661619998"
-							className="text-contrast"
+							className="text-contrast hover:text-primary transition"
 						>
 							06 61 61 99 98
 						</a>
 					</div>
 				</div>
-				<div className="grid justify-center gap-3 text-center">
-					<div className="text-contrast font-title uppercase text-xl">
+				<div className="grid justify-center gap-4 text-center">
+					<div className="text-contrast font-title uppercase text-lg">
 						Nous écrire
 					</div>
 					<Magnetic>
@@ -44,18 +44,18 @@ const Footer = () => {
 						</a>
 					</Magnetic>
 					<div className="footer__column__description">
-						<div>Par mail</div>
+						<div className="text-sm">Par mail</div>
 						<a
 							title="M'envoyer un email'"
 							href="mailto:contact@graphandco.com"
-							className="text-contrast"
+							className="text-contrast hover:text-primary transition"
 						>
 							contact@graphandco.com
 						</a>
 					</div>
 				</div>
-				<div className="grid justify-center gap-3 text-center">
-					<div className="text-contrast font-title uppercase text-xl">
+				<div className="grid justify-center gap-4 text-center">
+					<div className="text-contrast font-title uppercase text-lg">
 						Nous trouver
 					</div>
 					<Magnetic>
@@ -64,29 +64,35 @@ const Footer = () => {
 						</a>
 					</Magnetic>
 
-					<div className="footer__column__description">
+					<div className="text-sm">
 						1, rue de la Lucelle <br></br>68127
 						Sainte-Croix-en-Plaine
 					</div>
 				</div>
-				<div className="footer__column footer__column__links">
-					<div className="text-contrast font-title uppercase text-xl">
+				<div className="grid justify-center gap-4 text-center">
+					<div className="text-contrast font-title uppercase text-lg">
 						Liens
 					</div>
 					<ul>
 						<li>
-							<Link href="/mentions-legales">
+							<Link
+								className="text-sm hover:text-primary transition"
+								href="/mentions-legales"
+							>
 								Mentions légales
 							</Link>
 						</li>
 						<li>
 							{" "}
-							<Link href="/politique-de-confidentialite">
+							<Link
+								className="text-sm hover:text-primary transition"
+								href="/politique-de-confidentialite"
+							>
 								Politique de confidentialité
 							</Link>
 						</li>
 					</ul>
-					<div className="footer__column__links__description">
+					<div className="flex justify-center items-center gap-2 text-sm">
 						<Image
 							src="/img/logo.svg"
 							alt="Site Logo"

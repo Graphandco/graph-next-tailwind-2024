@@ -5,38 +5,39 @@ import CustomButton from "@/components/ui/CustomButton";
 import Magnetic from "@/components/ui/Magnetic";
 import React from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const Hero = () => {
 	const rocket = {
 		// type: 'spring',
 		// damping: 15,
 		// stiffness: 200,
-		duration: 0.75,
-		delay: 0.3,
+		duration: 0.6,
+		delay: 0.2,
 	};
 	const content = {
 		duration: 0.3,
 	};
 	return (
-		<div className="hero container flex flex-col-reverse justify-center md:grid md:grid-cols-[1.5fr_1fr] items-center">
-			<div className="grid grid-cols-1">
-				<div className="grid gap-5 py-5">
-					<div className="uppercase text-contrast">
-						Un métier, une passion
-					</div>
-					<div className="hero-title">Création de sites web</div>
-					<p>
-						Nous sommes spécialisés dans la réalisation de sites
-						web. Moderne et intuitif, votre site sera un puissant
-						levier pour accroitre la vitalité de votre entreprise.
-					</p>
-					<CustomButton secondary>Voir nos prestations</CustomButton>
+		<div className="hero container flex flex-col-reverse justify-center md:grid md:grid-cols-[1.5fr_1fr] items-center gap-8">
+			<div className="grid gap-5 justify-items-start py-5">
+				<div className="uppercase text-contrast">
+					Un métier, une passion
 				</div>
+				<div className="hero-title">Création de sites web</div>
+				<p>
+					Nous sommes spécialisés dans la réalisation de sites web.
+					Moderne et intuitif, votre site sera un puissant levier pour
+					accroitre la vitalité de votre entreprise.
+				</p>
+				<CustomButton>
+					<Link href="/prestations">Voir nos prestations</Link>
+				</CustomButton>
 			</div>
 			<motion.div
-				className="hero-lottie"
+				className="hero-lottie mx-auto w-40 sm:w-44 "
 				transition={rocket}
-				initial={{ y: "700px" }}
+				initial={{ y: "600px" }}
 				animate={{ y: "0px" }}
 			>
 				<LottieRocket />

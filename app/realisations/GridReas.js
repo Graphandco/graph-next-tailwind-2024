@@ -3,9 +3,18 @@ import React from "react";
 import { FaArrowTrendUp } from "react-icons/fa6";
 import { reas } from "@/app/realisations/data";
 
-const GridReas = () => {
+const GridReas = ({ realisations }) => {
 	return (
 		<>
+			{realisations.map((rea) => {
+				const { id, title } = rea.attributes;
+				console.log(rea.attributes.cover);
+				return (
+					<div key={id}>
+						<div>{title}</div>
+					</div>
+				);
+			})}
 			<div>GridReas</div>
 			<div className="grid-items">
 				{reas.map((rea, index) => {
