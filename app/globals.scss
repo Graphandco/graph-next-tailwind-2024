@@ -29,8 +29,8 @@ $breakpoints: (
 		--card-foreground: hsl(20deg 14.3% 4.1%);
 		--popover: hsl(0deg 0% 100%);
 		--popover-foreground: hsl(20deg 14.3% 4.1%);
-		// --primary: hsl(41.92deg 90% 50%);
-		--primary: hsl(42 90% 40% / 1);
+		// --primary: hsl(42 90% 40% / 1);
+		--primary: hsl(192 100% 30%);
 		--primary-foreground: hsl(26deg 83.3% 14.1%);
 		--secondary: hsl(60deg 4.8% 95.9%);
 		--secondary-foreground: hsl(24deg 9.8% 10%);
@@ -80,6 +80,7 @@ $breakpoints: (
 @import "../styles/header";
 @import "../styles/grid-reas";
 @import "../styles/custom-btn";
+@import "../styles/form";
 
 body {
 	@apply bg-background text-foreground font-text text-base;
@@ -87,6 +88,7 @@ body {
 	flex-direction: column;
 	min-height: 100vh;
 	min-height: 100dvh;
+	min-height: 100svh;
 	font-size: 1.3rem;
 	// background: linear-gradient(to bottom, var(--secondary), black)
 	// 	var(--secondary);

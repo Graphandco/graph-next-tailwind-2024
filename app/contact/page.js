@@ -1,3 +1,5 @@
+import { ContactForm } from "./ContactForm";
+
 export const metadata = {
 	title: "Contactez-nous | Graph and Co",
 	description:
@@ -6,9 +8,10 @@ export const metadata = {
 
 const Contact = () => {
 	return (
-		<>
+		<div className="container">
 			<h1>Contact</h1>
-		</>
+			<ContactForm />
+		</div>
 	);
 };
 

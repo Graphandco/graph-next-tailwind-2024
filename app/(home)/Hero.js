@@ -35,7 +35,7 @@ const Hero = () => {
 				</CustomButton>
 			</div>
 			<motion.div
-				className="hero-lottie mx-auto w-40 sm:w-44 "
+				className="hero-lottie py-5 mx-auto w-32 sm:w-40 "
 				transition={rocket}
 				initial={{ y: "600px" }}
 				animate={{ y: "0px" }}
