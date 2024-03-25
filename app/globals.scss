@@ -103,9 +103,9 @@ body {
 	// 	opacity: 0.4;
 	// 	z-index: -2;
 	// }
-	&:before {
+	&:after {
 		content: "";
-		position: fixed;
+		position: absolute;
 		inset: 0;
 		background-color: var(--background);
 		opacity: 0.4;

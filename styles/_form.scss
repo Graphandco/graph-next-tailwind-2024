@@ -23,7 +23,7 @@
 			text-align: center;
 			span {
 				position: relative;
-				color: white;
+				color: var(--contrast);
 				font-size: 1.6rem;
 				text-transform: uppercase;
 
@@ -106,12 +106,9 @@
 		}
 	}
 	.form-error {
-		background: red;
-		color: white;
-		padding: 0.25rem 1rem;
-		margin-top: 0.5rem;
-		border-radius: 5px;
-		display: inline-block;
+		position: absolute;
+		bottom: -30;
+		color: red;
 		font-size: 1rem;
 	}
 }

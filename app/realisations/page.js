@@ -24,7 +24,9 @@ const Realisations = async () => {
 	// const { title } = strapiData;
 	return (
 		<>
-			<h1>Réalisations</h1>
+			<div className="container">
+				<h1>Réalisations</h1>
+			</div>
 			<GridReas realisations={realisations} />
 		</>
 	);

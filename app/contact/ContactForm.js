@@ -24,7 +24,7 @@ export const ContactForm = () => {
 						type="text"
 						name="username"
 						id="username"
-						className="block py-2.5 px-0 w-full text-white bg-transparent border-0 border-b border-primary appearance-none  focus:outline-none focus:ring-0 focus:border-white peer"
+						className="block pt-2.5 px-0 w-full text-white bg-transparent border-0 border-b border-primary appearance-none  focus:outline-none focus:ring-0 focus:border-white peer"
 						placeholder=" "
 						required
 						{...register("name", { required: true, minLength: 2 })}
@@ -46,7 +46,7 @@ export const ContactForm = () => {
 						type="email"
 						name="useremail"
 						id="useremail"
-						className="block py-2.5 px-0 w-full text-white bg-transparent border-0 border-b border-primary appearance-none focus:outline-none focus:ring-0 focus:border-white peer"
+						className="block pt-2.5 px-0 w-full text-white bg-transparent border-0 border-b border-primary appearance-none focus:outline-none focus:ring-0 focus:border-white peer"
 						placeholder=" "
 						required
 						{...register("email", {
@@ -74,7 +74,7 @@ export const ContactForm = () => {
 						type="text"
 						name="floatinuserobjectg_object"
 						id="userobject"
-						className="block py-2.5 px-0 w-full bg-transparent border-0 border-b border-primary appearance-none text-white focus:outline-none focus:ring-0 focus:border-white peer"
+						className="block pt-2.5 px-0 w-full bg-transparent border-0 border-b border-primary appearance-none text-white focus:outline-none focus:ring-0 focus:border-white peer"
 						placeholder=" "
 						required
 						{...register("object", {
@@ -127,7 +127,7 @@ export const ContactForm = () => {
                     </div>
                 </div> */}
 
-				<div className="me-4 w-full form-group rgpd">
+				<div className="me-4 w-full form-group rgpd relative">
 					<label className="rounded-checkbox centered" htmlFor="rgpd">
 						<input
 							type="checkbox"
@@ -154,15 +154,17 @@ export const ContactForm = () => {
 					)}
 				</div>
 
-				<CustomButton onClick={handleSubmit(onSubmit)}>
-					<span>Envoyer</span>
-				</CustomButton>
+				<div className="mt-5">
+					<CustomButton onClick={handleSubmit(onSubmit)}>
+						<span>Envoyer</span>
+					</CustomButton>
+				</div>
 			</form>
 			<Image
 				src="img/contact.svg"
-				alt="Image de contact"
+				alt="Illustration de contact"
 				width={400}
-				height={300}
+				height={423}
 			/>
 		</section>
 	);
