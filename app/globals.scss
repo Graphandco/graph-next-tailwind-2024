@@ -85,10 +85,11 @@ $breakpoints: (
 body {
 	@apply bg-background text-foreground font-text text-base;
 	display: flex;
+	position: relative;
 	flex-direction: column;
 	min-height: 100vh;
-	min-height: 100dvh;
 	min-height: 100svh;
+	min-height: 100dvh;
 	font-size: 1.3rem;
 	// background: linear-gradient(to bottom, var(--secondary), black)
 	// 	var(--secondary);
@@ -103,14 +104,14 @@ body {
 	// 	opacity: 0.4;
 	// 	z-index: -2;
 	// }
-	// &:after {
-	// 	content: "";
-	// 	position: absolute;
-	// 	inset: 0;
-	// 	background-color: var(--background);
-	// 	opacity: 0.4;
-	// 	z-index: -1;
-	// }
+	&:after {
+		content: "";
+		position: absolute;
+		inset: 0;
+		background-color: var(--background);
+		opacity: 0.4;
+		z-index: -1;
+	}
 }
 
 h1,
