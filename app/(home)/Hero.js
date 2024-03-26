@@ -19,7 +19,7 @@ const Hero = () => {
 		duration: 0.3,
 	};
 	return (
-		<div className="hero container flex flex-col-reverse justify-center md:grid md:grid-cols-[1.5fr_1fr] items-center gap-8">
+		<div className="hero container flex flex-col-reverse justify-center md:grid md:grid-cols-[1.5fr_1fr] items-center gap-4 md:gap-8">
 			<div className="grid gap-5 justify-items-start py-5">
 				<div className="uppercase text-contrast">
 					Un métier, une passion
@@ -35,7 +35,7 @@ const Hero = () => {
 				</CustomButton>
 			</div>
 			<motion.div
-				className="hero-lottie py-5 mx-auto w-32 sm:w-40 "
+				className="hero-lottie py-5 mx-auto w-24 sm:w-40 "
 				transition={rocket}
 				initial={{ y: "600px" }}
 				animate={{ y: "0px" }}

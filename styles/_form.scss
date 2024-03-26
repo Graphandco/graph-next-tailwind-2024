@@ -73,6 +73,7 @@
 			padding: 3px;
 			// background-color: rgba(#000, 0.1);
 			border-radius: $heigth;
+			cursor: pointer;
 			input[type="checkbox"] {
 				display: none;
 				&:checked + .rounded-checkbox__outer {

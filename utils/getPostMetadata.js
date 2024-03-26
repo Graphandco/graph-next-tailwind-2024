@@ -13,6 +13,7 @@ export default function getPostMetadata(basePath) {
 		return {
 			title: matterResult.data.title,
 			description: matterResult.data.description,
+			image: matterResult.data.image,
 			slug: filename.replace(".md", ""),
 		};
 	});

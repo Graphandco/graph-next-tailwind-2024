@@ -10,7 +10,9 @@ const Contact = () => {
 	return (
 		<div className="container">
 			<h1>Contact</h1>
-			<h2>Une envie, un projet ?</h2>
+			<h2 className="text-lg text-contrast py-5">
+				Une envie, un projet ?
+			</h2>
 			<p>
 				Vous souhaitez avoir un site web créé à votre image, qui vous
 				ressemble et qui corresponde à vos valeurs ? Nous sommes là pour

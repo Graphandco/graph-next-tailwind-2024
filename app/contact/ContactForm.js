@@ -16,9 +16,7 @@ export const ContactForm = () => {
 	return (
 		<section id="contact-form" className="contact-form my-12">
 			<form className="grid gap-2 items-baseline">
-				<div className="form-title">
-					<span>Nous écrire</span>
-				</div>
+				{/* Name */}
 				<div className="relative z-0 w-full mb-2 group form-group">
 					<input
 						type="text"
@@ -41,6 +39,7 @@ export const ContactForm = () => {
 						</div>
 					)}
 				</div>
+				{/* Email */}
 				<div className="relative z-0 w-full mb-2 group form-group">
 					<input
 						type="email"
@@ -69,6 +68,7 @@ export const ContactForm = () => {
 						</div>
 					)}
 				</div>
+				{/* Objet */}
 				<div className="relative z-0 w-full mb-2 group form-group">
 					<input
 						type="text"
@@ -94,6 +94,7 @@ export const ContactForm = () => {
 						</div>
 					)}
 				</div>
+				{/* Message */}
 				<div className="relative z-0 w-full mb-2 group form-group">
 					<label htmlFor="message" className="block mb-2 font-medium">
 						Votre message
@@ -115,18 +116,7 @@ export const ContactForm = () => {
 						</div>
 					)}
 				</div>
-
-				{/* <div className="flex items-center relative z-0 w-full mb-2 group form-group rgpd">
-                    <div className="flex items-center">
-                        <input id="link-checkbox" type="checkbox" value="" className="rounded-full w-4 h-4 mr-2 text-white bg-gray-100 border-none" />
-
-                        <label htmlFor="link-checkbox">
-                            En cochant cette case, vous acceptez d’être recontacté par email, conformément à notre{' '}
-                            <Link href="">Politique de Confidentialité</Link>
-                        </label>
-                    </div>
-                </div> */}
-
+				{/* RGPD */}
 				<div className="me-4 w-full form-group rgpd relative">
 					<label className="rounded-checkbox centered" htmlFor="rgpd">
 						<input

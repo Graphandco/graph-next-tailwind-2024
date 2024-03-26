@@ -13,8 +13,8 @@ export default function Home() {
 	return (
 		<>
 			<Hero />
-			{/* <Competences />
-			<Atouts /> */}
+			<Competences />
+			<Atouts />
 			<LastReas />
 		</>
 	);
