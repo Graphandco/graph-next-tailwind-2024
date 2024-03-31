@@ -8,10 +8,10 @@ export const metadata = {
 
 const Prestations = () => {
 	return (
-		<>
+		<section className="container">
 			<h1>Prestations</h1>
 			<OutilsIcons />
-		</>
+		</section>
 	);
 };
 

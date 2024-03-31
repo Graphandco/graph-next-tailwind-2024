@@ -154,6 +154,13 @@ h1,
 }
 p {
 	margin-bottom: 0.75rem;
+
+	a {
+		color: var(--contrast);
+		&:hover {
+			color: var(--primary);
+		}
+	}
 }
 .hero {
 	min-height: calc(100vh - 64px);
@@ -205,4 +212,33 @@ p {
 	width: 500px;
 	aspect-ratio: 1;
 	background-color: limegreen;
+}
+.counters {
+	// &-wrapper {
+	// 	display: grid;
+	// 	grid-template-columns: repeat(4, 1fr);
+	// 	gap: 2rem;
+	// 	@include mq(mobile) {
+	// 		grid-template-columns: repeat(2, 1fr);
+	// 	}
+	// }
+	// &-item {
+	// 	display: flex;
+	// 	flex-direction: column;
+	// 	align-items: center;
+	// 	text-align: center;
+	// }
+	&-number {
+		margin-top: 1rem;
+		min-height: 2rem;
+		font-size: 3rem;
+		color: white;
+	}
+	&-title {
+		font-size: 1.2rem;
+	}
+	svg {
+		fill: var(--primary);
+		font-size: 3rem;
+	}
 }

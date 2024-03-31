@@ -2,6 +2,7 @@
 title: "Next JS"
 description: "Optimisez vos Performances Web et Améliorez votre Référencement avec Next.js"
 image: "/img/blog/nextjs.webp"
+category: "code"
 ---
 
 Dans le monde en constante évolution du développement web, trouver les bons outils pour créer des sites performants et bien référencés est crucial. C'est là que Next.js entre en jeu. Cette plateforme de développement web révolutionnaire combine la **rapidité de rendu** avec une **optimisation SEO** remarquable, offrant ainsi une solution complète pour les développeurs et les propriétaires de sites web.

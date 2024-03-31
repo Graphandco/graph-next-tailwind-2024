@@ -48,7 +48,7 @@ const Footer = () => {
 						<a
 							title="M'envoyer un email'"
 							href="mailto:contact@graphandco.com"
-							className="text-contrast hover:text-primary transition"
+							className="text-contrast hover:text-primary transition text-sm md:text-md"
 						>
 							contact@graphandco.com
 						</a>
@@ -76,7 +76,7 @@ const Footer = () => {
 					<ul>
 						<li>
 							<Link
-								className="text-sm hover:text-primary transition"
+								className="text-sm hover:text-primary transition leading-3"
 								href="/mentions-legales"
 							>
 								Mentions légales
@@ -85,7 +85,7 @@ const Footer = () => {
 						<li>
 							{" "}
 							<Link
-								className="text-sm hover:text-primary transition"
+								className="text-sm hover:text-primary transition leading-3"
 								href="/politique-de-confidentialite"
 							>
 								Politique de confidentialité

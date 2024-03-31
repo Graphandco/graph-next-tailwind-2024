@@ -1,9 +1,6 @@
 "use client";
 import LottieRocket from "@/components/lottie/LottieRocket";
 import CustomButton from "@/components/ui/CustomButton";
-// import CustomButton from "@/components/ui/CustomButton";
-import Magnetic from "@/components/ui/Magnetic";
-import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 

@@ -1,14 +1,37 @@
 "use client";
-import { useMotionValue, motion, useSpring, useTransform } from "framer-motion";
+import {
+	useMotionValue,
+	motion,
+	useSpring,
+	useTransform,
+	useScroll,
+} from "framer-motion";
 import React, { useRef } from "react";
 import { FiArrowRight } from "react-icons/fi";
 
 export const LastReas = () => {
+	const targetRef = useRef(null);
+	const { scrollYProgress } = useScroll({
+		target: targetRef,
+		offset: ["start end", "end start"],
+		// offset: ["start start", "end start"],
+	});
+
+	const translateY = useTransform(
+		scrollYProgress,
+		[0, 1],
+		["50px", "-100px"]
+	);
+
 	return (
-		<section className=" container py-28">
-			<h2 className="text-title-lg text-contrast font-title">
+		<section className="bg-black/5 dark:bg-white/5 container py-28 md:py-32">
+			<motion.h2
+				ref={targetRef}
+				style={{ translateY }}
+				className="text-xl text-contrast font-bold"
+			>
 				Nos dernières réalisations
-			</h2>
+			</motion.h2>
 			<div className="grid grid-cols-1 md:grid-cols-2 gap-10">
 				<Link
 					heading="3ème chance"

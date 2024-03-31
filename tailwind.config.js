@@ -43,8 +43,8 @@ module.exports = {
 				},
 			],
 			xl: [
-				"clamp(28px, 10px + 2vw, 35px)",
-				// "clamp(30px,20px + 2vw,45px)",
+				// "clamp(28px, 10px + 2vw, 35px)",
+				"clamp(40px,25px + 2vw,52px)",
 				{
 					lineHeight: "1.5rem",
 					letterSpacing: "-0.01em",

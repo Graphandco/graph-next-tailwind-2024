@@ -6,6 +6,19 @@ import { useRef } from "react";
 import { FaPaintBrush, FaUserAlt, FaLock, FaMobileAlt } from "react-icons/fa";
 
 const Atouts = () => {
+	const targetRef = useRef(null);
+	const { scrollYProgress } = useScroll({
+		target: targetRef,
+		offset: ["start end", "end start"],
+		// offset: ["start start", "end start"],
+	});
+
+	const translateY = useTransform(
+		scrollYProgress,
+		[0, 1],
+		["50px", "-100px"]
+	);
+
 	const items = [
 		{
 			title: "Interface utilisateur",
@@ -34,16 +47,20 @@ const Atouts = () => {
 	];
 	return (
 		<section className="">
-			<div className="container py-28 grid gap-5">
-				{/* <div className="-translate-y-8">
-					<ScreenFitText text="Les atouts de votre site" />
-				</div> */}
+			<div className="container py-28 md:py-32 grid gap-5">
+				<motion.h2
+					ref={targetRef}
+					style={{ translateY }}
+					className="text-xl text-contrast font-bold"
+				>
+					Les atouts de votre site
+				</motion.h2>
 
-				<div className="grid grid-cols-2 lg:grid-cols-4 gap-5">
+				<div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-5">
 					{items.map((item, index) => (
 						<motion.div
 							key={index}
-							className="atout-card backdrop-blur-md overflow-hidden grid justify-center items-center text-center gap-3 bg-black/5 dark:bg-white/5 hover:bg-black/10 dark:hover:bg-white/10 transition p-6 rounded-xl"
+							className="atout-card backdrop-blur-md overflow-hidden grid justify-center items-center text-center gap-1 md:gap-3 bg-black/5 dark:bg-white/5 hover:bg-black/10 dark:hover:bg-white/10 transition p-3 md:p-4 lg:p-6 rounded-xl"
 						>
 							<div className="text-primary mx-auto text-3xl">
 								{item.icon}

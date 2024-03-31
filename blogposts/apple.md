@@ -1,6 +1,7 @@
 ---
 title: "Chocolate Chip Cookies"
 description: "A traditional pie with a flaky crust and a sweet, spiced apple filling, perfect for any occasion."
+category: "news"
 ---
 
 ## Ingredients
