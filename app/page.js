@@ -2,6 +2,7 @@ import Atouts from "./(home)/Atouts";
 import Competences from "./(home)/Competences";
 import { Counters } from "./(home)/Counters";
 import Hero from "./(home)/Hero";
+import LastBlogs from "./(home)/LastBlogs";
 import { LastReas } from "./(home)/LastReas";
 
 export const metadata = {
@@ -18,6 +19,7 @@ export default function Home() {
 			<Atouts />
 			<LastReas />
 			<Counters />
+			<LastBlogs />
 		</>
 	);
 }

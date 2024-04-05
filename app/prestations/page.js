@@ -1,4 +1,6 @@
-import OutilsIcons from "./OutilsIcons";
+import { FAQ } from "./FAQ";
+import Intro from "./Intro";
+import Marquee from "./Marquee";
 
 export const metadata = {
 	title: "Nos prestations de créations de sites Web | Graph and Co",
@@ -8,10 +10,12 @@ export const metadata = {
 
 const Prestations = () => {
 	return (
-		<section className="container">
+		<div className="container">
 			<h1>Prestations</h1>
-			<OutilsIcons />
-		</section>
+			<Intro />
+			<FAQ />
+			<Marquee />
+		</div>
 	);
 };
 

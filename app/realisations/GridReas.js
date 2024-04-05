@@ -6,7 +6,7 @@ import { reas } from "@/app/realisations/data";
 const GridReas = ({ realisations }) => {
 	return (
 		<>
-			{realisations.map((rea) => {
+			{/* {realisations.map((rea) => {
 				const { id, title } = rea.attributes;
 				console.log(rea.attributes.cover);
 				return (
@@ -14,7 +14,7 @@ const GridReas = ({ realisations }) => {
 						<div>{title}</div>
 					</div>
 				);
-			})}
+			})} */}
 			<div>GridReas</div>
 			<div className="grid-items">
 				{reas.map((rea, index) => {

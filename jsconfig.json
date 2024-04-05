@@ -4,5 +4,5 @@
 			"@/*": ["./*"]
 		}
 	},
-	"include": ["components/**/*"]
+	"include": ["components/**/*", "app/prestations/Marquee.js"]
 }

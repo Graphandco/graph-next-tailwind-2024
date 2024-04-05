@@ -26,10 +26,10 @@ const Postsgrid = ({ posts }) => {
 						animate={{ opacity: 1 }}
 						exit={{ opacity: 0 }}
 						transition={{ duration: 0.5 }}
+						key={postIndex}
 					>
 						<Link
 							href={`/blog/${post.slug}`}
-							key={postIndex}
 							style={{ backgroundImage: `url('${post.image}')` }}
 							className="bg-black px-5 py-3 aspect-[2/1] rounded-xl bg-cover flex justify-end items-end"
 						>
