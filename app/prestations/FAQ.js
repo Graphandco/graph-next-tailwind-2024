@@ -7,12 +7,14 @@ export const FAQ = () => {
 	const [selected, setSelected] = useState(TABS[0]);
 
 	return (
-		<section className="overflow-hidden mt-8">
-			<h2 className="text-xl mb-4 text-contrast">
-				Nous répondons à vos questions
-			</h2>
-			<Tabs selected={selected} setSelected={setSelected} />
-			<Questions selected={selected} />
+		<section className="overflow-hidden bg-white/5">
+			<div className="container py-28 md:py-32">
+				<h2 className="text-xl text-contrast">
+					Nous répondons à vos questions
+				</h2>
+				<Tabs selected={selected} setSelected={setSelected} />
+				<Questions selected={selected} />
+			</div>
 		</section>
 	);
 };
@@ -34,7 +36,7 @@ export const FAQ = () => {
 
 const Tabs = ({ selected, setSelected }) => {
 	return (
-		<div className="relative z-10 flex flex-wrap items-center gap-4">
+		<div className="relative z-10 flex flex-wrap items-center gap-4 ">
 			{TABS.map((tab) => (
 				<button
 					onClick={() => setSelected(tab)}

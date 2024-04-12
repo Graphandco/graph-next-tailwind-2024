@@ -162,6 +162,9 @@ p {
 		}
 	}
 }
+.yellow-border {
+	@apply relative pl-8 before:content-[""] before:absolute before:w-[2px] before:h-full before:left-0 before:rounded-3xl before:bg-primary;
+}
 .hero {
 	min-height: calc(100vh - 64px);
 	min-height: calc(100dvh - 64px);

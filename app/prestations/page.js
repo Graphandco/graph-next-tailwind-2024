@@ -10,12 +10,14 @@ export const metadata = {
 
 const Prestations = () => {
 	return (
-		<div className="container">
-			<h1>Prestations</h1>
-			<Intro />
+		<>
+			<div className="container">
+				<h1>Prestations</h1>
+				<Intro />
+			</div>
 			<FAQ />
 			<Marquee />
-		</div>
+		</>
 	);
 };
 

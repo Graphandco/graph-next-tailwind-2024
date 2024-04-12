@@ -139,9 +139,9 @@ export default function Marquee() {
 			// variants={slideUp}
 			initial="initial"
 			animate="enter"
-			className="relative overflow-hidden my-8"
+			className="container relative overflow-hidden my-8"
 		>
-			<h2 className="text-lg">
+			<h2 className="text-lg text-white">
 				Quelques outils et langages que nous utilisons pour la création
 				de nos sites !
 			</h2>
