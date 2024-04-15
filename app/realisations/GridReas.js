@@ -18,6 +18,7 @@ const GridReas = ({ realisations }) => {
 				{realisations.map((rea) => {
 					const { title, description, grid } = rea.attributes;
 					const imageURL = `${process.env.STRAPI_API_URL}${rea.attributes.thumbnail.data.attributes.url}`;
+					console.log(imageURL);
 					return (
 						<div
 							className="grid-item relative"
@@ -34,12 +35,12 @@ const GridReas = ({ realisations }) => {
 								Voir <FaArrowTrendUp />
 							</a>
 							<div className="grid-image">
-								{/* <Image src={imageURL} fill="true" /> */}
 								<Image
 									src={imageURL}
 									fill="true"
 									alt={title}
-									sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+									// sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+									placeholder="blur" // "empty" | "blur" | "data:image/..."
 								/>
 							</div>
 						</div>
