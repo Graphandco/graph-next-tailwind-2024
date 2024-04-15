@@ -37,8 +37,10 @@ const GridReas = ({ realisations }) => {
 							<div className="grid-image">
 								{/* <Image src={imageURL} fill="true" /> */}
 								<Image
-									src="https://strapi.graphandco.com/uploads/troisieme_chance_3bdfe3d973.webp"
+									src={imageURL}
 									fill="true"
+									alt={title}
+									sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
 								/>
 							</div>
 						</div>
