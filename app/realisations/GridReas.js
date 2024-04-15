@@ -16,7 +16,6 @@ const GridReas = ({ realisations }) => {
 			})} */}
 			<div className="grid-items">
 				{realisations.map((rea) => {
-					console.log(rea);
 					const { title, description, grid } = rea.attributes;
 					const imageURL = `${process.env.STRAPI_API_URL}${rea.attributes.thumbnail.data.attributes.url}`;
 					return (
