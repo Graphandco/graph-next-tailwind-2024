@@ -114,7 +114,7 @@ export default LastBlogs;
 const items = [
 	{
 		id: 1,
-		url: "/imgs/computer/mouse.png",
+		url: "/img/blog/nextjs.webp",
 		category: "Mice",
 		title: "Just feels right",
 		description:
@@ -122,7 +122,7 @@ const items = [
 	},
 	{
 		id: 2,
-		url: "/imgs/computer/keyboard.png",
+		url: "/img/blog/nextjs.webp",
 		category: "Keyboards",
 		title: "Type in style",
 		description:
@@ -130,7 +130,7 @@ const items = [
 	},
 	{
 		id: 3,
-		url: "/imgs/computer/monitor.png",
+		url: "/img/blog/nextjs.webp",
 		category: "Monitors",
 		title: "Looks like a win",
 		description:
@@ -138,7 +138,7 @@ const items = [
 	},
 	{
 		id: 4,
-		url: "/imgs/computer/chair.png",
+		url: "/img/blog/nextjs.webp",
 		category: "Chairs",
 		title: "Back feels great",
 		description:
@@ -146,7 +146,7 @@ const items = [
 	},
 	{
 		id: 5,
-		url: "/imgs/computer/lights.png",
+		url: "/img/blog/nextjs.webp",
 		category: "Lights",
 		title: "It's lit",
 		description:
@@ -154,7 +154,7 @@ const items = [
 	},
 	{
 		id: 6,
-		url: "/imgs/computer/desk.png",
+		url: "/img/blog/nextjs.webp",
 		category: "Desks",
 		title: "Stand up straight",
 		description:
@@ -162,7 +162,7 @@ const items = [
 	},
 	{
 		id: 7,
-		url: "/imgs/computer/headphones.png",
+		url: "/img/blog/nextjs.webp",
 		category: "Headphones",
 		title: "Sounds good",
 		description:

@@ -40,7 +40,7 @@ const GridReas = ({ realisations }) => {
 									fill="true"
 									alt={title}
 									// sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-									placeholder="blur" // "empty" | "blur" | "data:image/..."
+									placeholder="empty" // "empty" | "blur" | "data:image/..."
 								/>
 							</div>
 						</div>
