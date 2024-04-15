@@ -1,7 +1,6 @@
 import Image from "next/image";
 import React from "react";
 import { FaArrowTrendUp } from "react-icons/fa6";
-import { reas } from "@/app/realisations/data";
 
 const GridReas = ({ realisations }) => {
 	return (
@@ -15,26 +14,32 @@ const GridReas = ({ realisations }) => {
 					</div>
 				);
 			})} */}
-			<div>GridReas</div>
 			<div className="grid-items">
-				{reas.map((rea, index) => {
+				{realisations.map((rea) => {
+					console.log(rea);
+					const { title, description, grid } = rea.attributes;
+					const imageURL = `${process.env.STRAPI_API_URL}${rea.attributes.thumbnail.data.attributes.url}`;
 					return (
 						<div
 							className="grid-item relative"
-							style={{ gridArea: `${rea.grid}` }}
-							key={index}
+							style={{ gridArea: `${grid}` }}
+							key={rea.id}
 						>
 							<div className="grid-content">
-								<div className="grid-title">{rea.title}</div>
+								<div className="grid-title">{title}</div>
 								<div className="grid-description">
-									{rea.description}
+									{description}
 								</div>
 							</div>
 							<a className="grid-link" href={rea.href}>
 								Voir <FaArrowTrendUp />
 							</a>
 							<div className="grid-image">
-								<Image src={rea.image} fill="true" />
+								{/* <Image src={imageURL} fill="true" /> */}
+								<Image
+									src="https://strapi.graphandco.com/uploads/troisieme_chance_3bdfe3d973.webp"
+									fill="true"
+								/>
 							</div>
 						</div>
 					);
