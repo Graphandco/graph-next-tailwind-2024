@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import { FaArrowTrendUp } from "react-icons/fa6";
 
@@ -16,9 +17,9 @@ const GridReas = ({ realisations }) => {
 			})} */}
 			<div className="grid-items">
 				{realisations.map((rea) => {
-					const { title, description, grid } = rea.attributes;
+					const { title, description, grid, slug } = rea.attributes;
 					const imageURL = `${process.env.STRAPI_API_URL}${rea.attributes.thumbnail.data.attributes.url}`;
-					console.log(imageURL);
+					// console.log(imageURL);
 					return (
 						<div
 							className="grid-item relative"
@@ -31,15 +32,18 @@ const GridReas = ({ realisations }) => {
 									{description}
 								</div>
 							</div>
-							<a className="grid-link" href={rea.href}>
+							<Link
+								className="grid-link"
+								href={`realisations/${slug}`}
+							>
 								Voir <FaArrowTrendUp />
-							</a>
+							</Link>
 							<div className="grid-image">
 								<Image
 									src={imageURL}
 									fill="true"
 									alt={title}
-									// sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+									sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
 									placeholder="empty" // "empty" | "blur" | "data:image/..."
 								/>
 							</div>

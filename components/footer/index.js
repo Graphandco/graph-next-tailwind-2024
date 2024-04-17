@@ -99,7 +99,7 @@ const Footer = () => {
 							width={25}
 							height={25}
 						/>
-						Graph and Co 2023
+						Graph and Co {new Date().getFullYear()}
 					</div>
 				</div>
 			</div>

@@ -31,7 +31,7 @@
 	}
 }
 .grid-item {
-	min-height: 200px;
+	min-height: 250px;
 	isolation: isolate;
 	@include mq(mobile) {
 		min-height: 280px;
