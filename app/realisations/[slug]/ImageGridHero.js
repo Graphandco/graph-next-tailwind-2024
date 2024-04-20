@@ -5,14 +5,13 @@ import { useRef } from "react";
 import CustomButton from "@/components/ui/CustomButton";
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 import ReaContent from "./ReaContent";
+import Image from "next/image";
 
-const ImageGridHero = ({ realisation }) => {
+const ImageGridHero = ({ realisation, strapiURL }) => {
 	const targetRef = useRef(null);
 	const { scrollYProgress } = useScroll({
 		target: targetRef,
 	});
-
-	console.log(realisation);
 
 	return (
 		<>
@@ -25,12 +24,13 @@ const ImageGridHero = ({ realisation }) => {
 					<Images
 						scrollYProgress={scrollYProgress}
 						realisation={realisation}
+						strapiURL={strapiURL}
 					/>
 					<Circles />
 				</div>
 			</section>
 
-			<ReaContent realisation={realisation} />
+			<ReaContent realisation={realisation} strapiURL={strapiURL} />
 		</>
 	);
 };
@@ -64,7 +64,7 @@ const Copy = ({ scrollYProgress, realisation }) => {
 	);
 };
 
-const Images = ({ scrollYProgress, realisation }) => {
+const Images = ({ scrollYProgress, realisation, strapiURL }) => {
 	const scale = useTransform(scrollYProgress, [0, 1], [0.75, 1]);
 
 	const image1Offset = useTransform(scrollYProgress, [0, 1], ["-35%", "0%"]);
@@ -85,10 +85,16 @@ const Images = ({ scrollYProgress, realisation }) => {
 
 	return (
 		<>
+			{/* <Image
+				src="https://strapi.graphandco.com/uploads/bomot_46a28529d6.webp"
+				alt="Bomot"
+				fill
+				cover
+			/> */}
 			<motion.div
 				className="col-span-2 relative z-10"
 				style={{
-					backgroundImage: `url(${process.env.STRAPI_API_URL}${realisation.thumbnail.data.attributes.url})`,
+					backgroundImage: `url(${strapiURL}${realisation.thumbnail.data.attributes.url})`,
 					backgroundSize: "cover",
 					backgroundPosition: "center",
 					scale,
@@ -99,7 +105,7 @@ const Images = ({ scrollYProgress, realisation }) => {
 			<motion.div
 				className="row-span-2 relative z-10"
 				style={{
-					backgroundImage: `url(${process.env.STRAPI_API_URL}${realisation.image2.data.attributes.url})`,
+					backgroundImage: `url(${strapiURL}${realisation.image2.data.attributes.url})`,
 					backgroundSize: "cover",
 					backgroundPosition: "center",
 					scale,
@@ -111,7 +117,7 @@ const Images = ({ scrollYProgress, realisation }) => {
 			<motion.div
 				className="row-span-2 relative z-10"
 				style={{
-					backgroundImage: `url(${process.env.STRAPI_API_URL}${realisation.image3.data.attributes.url})`,
+					backgroundImage: `url(${strapiURL}${realisation.image3.data.attributes.url})`,
 					backgroundSize: "cover",
 					backgroundPosition: "center",
 					scale,
@@ -122,7 +128,7 @@ const Images = ({ scrollYProgress, realisation }) => {
 			<motion.div
 				className="relative z-10"
 				style={{
-					backgroundImage: `url(${process.env.STRAPI_API_URL}${realisation.image4.data.attributes.url})`,
+					backgroundImage: `url(${strapiURL}${realisation.image4.data.attributes.url})`,
 					backgroundSize: "cover",
 					backgroundPosition: "center",
 					scale,
@@ -134,7 +140,7 @@ const Images = ({ scrollYProgress, realisation }) => {
 			<motion.div
 				className="relative z-10"
 				style={{
-					backgroundImage: `url(${process.env.STRAPI_API_URL}${realisation.image5.data.attributes.url})`,
+					backgroundImage: `url(${strapiURL}${realisation.image5.data.attributes.url})`,
 					backgroundSize: "cover",
 					backgroundPosition: "center",
 					scale,
@@ -145,7 +151,7 @@ const Images = ({ scrollYProgress, realisation }) => {
 			<motion.div
 				className="relative z-10"
 				style={{
-					backgroundImage: `url(${process.env.STRAPI_API_URL}${realisation.image6.data.attributes.url})`,
+					backgroundImage: `url(${strapiURL}${realisation.image6.data.attributes.url})`,
 					backgroundSize: "cover",
 					backgroundPosition: "center",
 					scale,

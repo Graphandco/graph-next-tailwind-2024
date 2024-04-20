@@ -11,14 +11,14 @@ import {
 import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
 
-const ReaContent = ({ realisation }) => {
+const ReaContent = ({ realisation, strapiURL }) => {
 	const slides = [
-		process.env.STRAPI_API_URL + realisation.thumbnail.data.attributes.url,
-		process.env.STRAPI_API_URL + realisation.image2.data.attributes.url,
-		process.env.STRAPI_API_URL + realisation.image3.data.attributes.url,
-		process.env.STRAPI_API_URL + realisation.image4.data.attributes.url,
-		process.env.STRAPI_API_URL + realisation.image5.data.attributes.url,
-		process.env.STRAPI_API_URL + realisation.image6.data.attributes.url,
+		strapiURL + realisation.thumbnail.data.attributes.url,
+		strapiURL + realisation.image2.data.attributes.url,
+		strapiURL + realisation.image3.data.attributes.url,
+		strapiURL + realisation.image4.data.attributes.url,
+		strapiURL + realisation.image5.data.attributes.url,
+		strapiURL + realisation.image6.data.attributes.url,
 	];
 
 	return (
@@ -62,14 +62,14 @@ const ReaContent = ({ realisation }) => {
 									key={index}
 									className="md:basis-1/2 lg:basis-1/3"
 								>
-									<span className="text-center text-xl">
+									{/* <span className="text-center text-xl">
 										{index}
-									</span>
-									{/* <Image
-									src={slide}
-									alt={realisation.title}
-									fill
-								/> */}
+									</span> */}
+									<Image
+										src={slide}
+										alt={realisation.title}
+										fill
+									/>
 								</CarouselItem>
 							);
 						})}
