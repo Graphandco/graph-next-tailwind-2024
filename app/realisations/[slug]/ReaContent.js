@@ -44,7 +44,7 @@ const ReaContent = ({ realisation, strapiURL }) => {
 			<div className="grid grid-cols-1 md:grid-cols-2 my-10">
 				<Carousel
 					opts={{
-						align: "start",
+						align: "center",
 						loop: true,
 					}}
 					plugins={[
@@ -52,7 +52,7 @@ const ReaContent = ({ realisation, strapiURL }) => {
 							delay: 4000,
 						}),
 					]}
-					className="w-full max-w-sm"
+					className="w-full"
 				>
 					<CarouselContent>
 						{slides.map((slide, index) => {
@@ -60,7 +60,7 @@ const ReaContent = ({ realisation, strapiURL }) => {
 							return (
 								<CarouselItem
 									key={index}
-									className="md:basis-1/2 lg:basis-1/3"
+									className="md:basis-1/2 lg:basis-1/3 flex justify-center"
 								>
 									{/* <span className="text-center text-xl">
 										{index}
@@ -68,7 +68,8 @@ const ReaContent = ({ realisation, strapiURL }) => {
 									<Image
 										src={slide}
 										alt={realisation.title}
-										fill
+										width={300}
+										height={300}
 									/>
 								</CarouselItem>
 							);

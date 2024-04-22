@@ -15,7 +15,7 @@ export const ContactForm = () => {
 	};
 	return (
 		<section id="contact-form" className="contact-form my-12">
-			<form className="grid gap-2 items-baseline">
+			<form className="grid gap-2 items-baseline max-w-xl">
 				{/* Name */}
 				<div className="relative z-0 w-full mb-2 group form-group">
 					<input

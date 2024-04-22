@@ -187,11 +187,7 @@ p {
 	}
 }
 
-.blog-post {
-	@media (width > 767px) {
-		column-count: 2;
-		column-gap: 2rem;
-	}
+.text-content {
 	h2 {
 		font-size: clamp(30px, 25px + 2vw, 40px);
 		font-family: var(--title-font);
@@ -209,6 +205,12 @@ p {
 		&:hover {
 			color: var(--primary);
 		}
+	}
+}
+.blog-post {
+	@media (width > 767px) {
+		column-count: 2;
+		column-gap: 2rem;
 	}
 }
 

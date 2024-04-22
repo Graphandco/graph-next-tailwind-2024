@@ -46,7 +46,7 @@ export default function RecipePage(props) {
 				/>
 			</div>
 			<hr className="border-primary my-5" />
-			<div className="blog-post mb-10">
+			<div className="text-content mb-10">
 				<Markdown>{post.content}</Markdown>
 			</div>
 		</article>
