@@ -41,7 +41,7 @@ const LastBlogs = () => {
 	};
 
 	return (
-		<section className="bg-black/5 dark:bg-white/5" ref={ref}>
+		<section className="bg-black/5 dark:bg-white/5 py-10" ref={ref}>
 			<div className="relative overflow-hidden p-4">
 				{/* CARDS */}
 				<div className="mx-auto max-w-6xl">

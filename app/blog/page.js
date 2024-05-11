@@ -1,14 +1,12 @@
 import getPostMetadata from "@/utils/getPostMetadata";
 import Postsgrid from "./Postsgrid";
-import FilterButtons from "./FilterButtons";
 
 export default function Home() {
 	const postMetadata = getPostMetadata("blogposts");
 
 	return (
-		<div className="container postsContainer">
+		<div className="container postsContainer pb-10">
 			<h1>Notre blog</h1>
-			<FilterButtons />
 			<Postsgrid posts={postMetadata} />
 		</div>
 	);

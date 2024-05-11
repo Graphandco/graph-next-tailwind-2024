@@ -1,19 +1,14 @@
 "use client";
 import { motion } from "framer-motion";
-import { useState } from "react";
 
-const tabs = ["Tous", "Code", "News", "Design"];
-
-const FilterButtons = () => {
-	const [selected, setSelected] = useState(tabs[0]);
-
+const FilterButtons = ({ tabs, tabActive, setTabActive }) => {
 	return (
 		<div className="flex items-center justify-center flex-wrap gap-2 mb-5">
 			{tabs.map((tab) => (
 				<Chip
 					text={tab}
-					selected={selected === tab}
-					setSelected={setSelected}
+					selected={tabActive === tab}
+					setSelected={setTabActive}
 					key={tab}
 				/>
 			))}

@@ -57,6 +57,7 @@ const Stat = ({ num, suffix, decimals = 0, subheading, Icon }) => {
 
 		animate(0, num, {
 			duration: 2.5,
+			repeat: 0,
 			onUpdate(value) {
 				if (!ref.current) return;
 
