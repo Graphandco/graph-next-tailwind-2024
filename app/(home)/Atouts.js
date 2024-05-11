@@ -66,7 +66,7 @@ const Atouts = () => {
 								{item.icon}
 							</div>
 							<div className="text-contrast">{item.title}</div>
-							<div className="text-xs leading-5">
+							<div className="text-sm leading-5">
 								{item.description}
 							</div>
 						</motion.div>

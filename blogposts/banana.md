@@ -2,6 +2,7 @@
 title: "Banana Bread"
 description: "Moist and flavorful bread made with ripe bananas, perfect for breakfast or a snack."
 category: "news"
+image: "/img/blog/nextjs.webp"
 ---
 
 ## Ingredients

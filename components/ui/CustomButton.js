@@ -45,7 +45,7 @@ export default function index({
 	return (
 		<Magnetic>
 			<div
-				className="roundedButton"
+				className="roundedButton font-semibold"
 				style={{ overflow: "hidden" }}
 				onMouseEnter={() => {
 					manageMouseEnter();

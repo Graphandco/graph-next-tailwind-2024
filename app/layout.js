@@ -13,6 +13,22 @@ const mostranuova = localFont({
 			path: "../public/fonts/mostranuova.ttf",
 			weight: "400",
 		},
+		{
+			path: "../public/fonts/mostranuova-600.ttf",
+			weight: "600",
+		},
+		{
+			path: "../public/fonts/mostranuova-700.ttf",
+			weight: "700",
+		},
+		{
+			path: "../public/fonts/mostranuova-700.ttf",
+			weight: "900",
+		},
+		{
+			path: "../public/fonts/mostranuova-700.ttf",
+			weight: "700",
+		},
 	],
 	variable: "--text-font",
 });

@@ -92,14 +92,16 @@ const Footer = () => {
 							</Link>
 						</li>
 					</ul>
-					<div className="flex justify-center items-center gap-2 text-sm">
+					<div className="flex justify-center items-center gap-2 flex-wrap">
 						<Image
 							src="/img/logo.svg"
 							alt="Site Logo"
-							width={25}
-							height={25}
+							width={20}
+							height={20}
 						/>
-						Graph and Co {new Date().getFullYear()}
+						<span className="shrink-0 text-xs">
+							Graph and Co {new Date().getFullYear()}
+						</span>
 					</div>
 				</div>
 			</div>
