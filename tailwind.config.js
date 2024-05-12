@@ -29,7 +29,7 @@ module.exports = {
 			sm: [
 				"1.1rem",
 				{
-					lineHeight: "1.6rem",
+					lineHeight: "1.2rem",
 					letterSpacing: "-0.01em",
 					fontWeight: "500",
 				},
