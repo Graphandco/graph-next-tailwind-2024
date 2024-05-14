@@ -79,7 +79,6 @@ $breakpoints: (
 }
 @import "../styles/header";
 @import "../styles/grid-reas";
-@import "../styles/custom-btn";
 @import "../styles/form";
 
 ::-moz-selection {
@@ -101,7 +100,7 @@ body {
 	min-height: 100vh;
 	min-height: 100svh;
 	min-height: 100dvh;
-	font-size: 1.3rem;
+	font-size: 1.2rem;
 	text-wrap: pretty;
 	// background: linear-gradient(to bottom, var(--secondary), black)
 	// 	var(--secondary);

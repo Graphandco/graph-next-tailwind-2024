@@ -19,14 +19,14 @@ export default function index({
 				{
 					top: "-25%",
 					width: "150%",
-					duration: 0.4,
+					duration: 0.2,
 					ease: "power3.in",
 				},
 				"enter"
 			)
 			.to(
 				circle.current,
-				{ top: "-150%", width: "125%", duration: 0.25 },
+				{ top: "-150%", width: "125%", duration: 0.15 },
 				"exit"
 			);
 	}, []);
@@ -45,7 +45,7 @@ export default function index({
 	return (
 		<Magnetic>
 			<div
-				className="roundedButton font-semibold"
+				className=" rounded-full bg-primary cursor-pointer relative flex items-center justify-center px-14 py-4 w-fit font-semibold text-black"
 				style={{ overflow: "hidden" }}
 				onMouseEnter={() => {
 					manageMouseEnter();
@@ -59,7 +59,7 @@ export default function index({
 				<div
 					ref={circle}
 					style={{ backgroundColor }}
-					className="circle"
+					className="w-full h-[150%] absolute rounded-[50%] top-full -z-10"
 				></div>
 			</div>
 		</Magnetic>
