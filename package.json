@@ -31,7 +31,7 @@
     "react-use-measure": "^2.1.1",
     "sass": "^1.72.0",
     "sonner": "^1.4.3",
-    "tailwind-merge": "^2.2.1",
+    "tailwind-merge": "^2.3.0",
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {

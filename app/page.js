@@ -1,5 +1,6 @@
 import Atouts from "./(home)/Atouts";
 import Competences from "./(home)/Competences";
+import Competences2 from "./(home)/Competences2";
 import { Counters } from "./(home)/Counters";
 import Hero from "./(home)/Hero";
 import LastBlogs from "./(home)/LastBlogs";
@@ -15,6 +16,7 @@ export default function Home() {
 	return (
 		<>
 			<Hero />
+			<Competences2 />
 			<Competences />
 			<Atouts />
 			<LastReas />
