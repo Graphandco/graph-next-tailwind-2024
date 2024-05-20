@@ -53,15 +53,11 @@ const foundation = localFont({
 
 export default function RootLayout({ children }) {
 	return (
-		<html
-			lang="fr"
-			className="dark bg-fixed bg-cover"
-			suppressHydrationWarning
-			style={{ backgroundImage: `url("/img/site-bg.svg")` }}
-		>
+		<html lang="fr" className="dark" suppressHydrationWarning>
 			<head />
 			<body
-				className={`${mostranuova.variable} ${mostranuova2.variable} ${foundation.variable} `}
+				className={`${mostranuova.variable} ${mostranuova2.variable} ${foundation.variable} bg-fixed bg-cover`}
+				style={{ backgroundImage: `url("/img/site-bg.svg")` }}
 				suppressHydrationWarning={true}
 			>
 				{/* <div className="site-bg fixed inset-0 -z-10 object-top">
