@@ -27,7 +27,7 @@ const Hero = () => {
 					Moderne et intuitif, votre site sera un puissant levier pour
 					accroitre la vitalité de votre entreprise.
 				</p>
-				<CustomButton>
+				<CustomButton primary>
 					<Link href="/prestations">Voir nos prestations</Link>
 				</CustomButton>
 			</div>

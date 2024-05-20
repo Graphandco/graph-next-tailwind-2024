@@ -115,14 +115,14 @@ body {
 	// 	opacity: 0.4;
 	// 	z-index: -2;
 	// }
-	&:after {
-		content: "";
-		position: fixed;
-		inset: 0;
-		background-color: var(--background);
-		opacity: 0.4;
-		z-index: -1;
-	}
+	// &:after {
+	// 	content: "";
+	// 	position: fixed;
+	// 	inset: 0;
+	// 	background-color: var(--background);
+	// 	opacity: 0.4;
+	// 	z-index: -1;
+	// }
 }
 
 h1,

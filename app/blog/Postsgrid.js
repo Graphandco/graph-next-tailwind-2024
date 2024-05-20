@@ -53,8 +53,10 @@ const Postsgrid = ({ posts }) => {
 									<p className="leading-6">
 										{post.description}
 									</p>
-									<CustomButton href={`/blog/${post.slug}`}>
-										Lire la suite
+									<CustomButton size="small">
+										<a href={`/blog/${post.slug}`}>
+											Lire la suite
+										</a>
 									</CustomButton>
 								</div>
 							</motion.div>
